@@ -1,0 +1,1 @@
+{"name":"gregory-jewels-concepts","private":true,"scripts":{"build":"tailwindcss -i src/input.css -o css/tailwind.css --minify","watch":"tailwindcss -i src/input.css -o css/tailwind.css --watch","serve":"npx --yes http-server . -p 4173 -c-1"},"devDependencies":{"@tailwindcss/cli":"^4.3.3","tailwindcss":"^4.3.3"}}

@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gregory Jewels — Concept 02, Art / Portfolio</title>
+<meta name="description" content="Gregory Jewels. Un atelier di gioielli d'autore: disegni, fiamma, pietre.">
+<meta name="theme-color" content="#efe9db">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/cormorant-400.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body class="bg-stone">
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:bg-ink focus:text-white focus:px-4 focus:py-2">Vai al contenuto</a>
+<div class="cursor" aria-hidden="true"></div>
+
+<!-- ============ NAV (blends over any ground) ============ -->
+<header data-header class="fixed inset-x-0 top-0 z-[70] text-white mix-blend-difference max-md:bg-stone max-md:text-ink max-md:mix-blend-normal">
+  <div class="hero-fade flex items-center justify-between px-5 py-5 sm:px-10 lg:px-14" style="--d:2s">
+    <a href="concept-2.html" class="flex items-center gap-3" aria-label="Gregory Jewels — inizio pagina">
+      <img class="hidden h-9 w-auto md:block" src="img/logo-mark-light.png" alt="" width="30" height="44">
+      <img class="h-9 w-auto md:hidden" src="img/logo-mark.png" alt="" width="30" height="44">
+      <span class="hidden font-display text-xl tracking-[.26em] sm:inline">GREGORY JEWELS</span>
+    </a>
+    <nav aria-label="Principale" class="hidden gap-9 text-[.7rem] uppercase tracking-[.22em] md:flex">
+      <a class="u-link" href="#opere">Opere</a>
+      <a class="u-link" href="#processo">Processo</a>
+      <a class="u-link" href="#studio">Studio</a>
+      <a class="u-link" href="#contatti">Contatti</a>
+    </nav>
+    <button data-menu-toggle type="button" aria-expanded="false" aria-controls="menu" aria-label="Apri il menu" class="-mr-2 inline-flex min-h-11 items-center px-2 text-[.7rem] uppercase tracking-[.22em] md:hidden">Indice</button>
+  </div>
+</header>
+<div id="menu" data-menu class="invisible fixed inset-0 z-[60] flex flex-col justify-end bg-ink px-6 pb-12 pt-24 text-white opacity-0 transition-[opacity,visibility] duration-700 ease-lux [&.is-open]:visible [&.is-open]:opacity-100 md:hidden">
+  <nav aria-label="Menu" class="flex flex-col gap-1 font-display text-[clamp(3rem,15vw,5rem)] italic leading-[1.05]">
+    <a href="#opere">Opere</a><a href="#processo">Processo</a><a href="#studio">Studio</a><a href="#contatti">Contatti</a>
+  </nav>
+</div>
+
+<main id="main">
+
+<!-- ============ 1. HERO SPERIMENTALE ============ -->
+<section class="relative isolate min-h-[100svh] overflow-hidden px-5 pb-10 pt-28 sm:px-10 lg:px-14" aria-label="Apertura">
+  <h1 class="hero-lines relative z-20 font-display font-normal leading-[.82] tracking-[-.03em] text-ink">
+    <span class="line"><span class="block text-[clamp(4.6rem,23vw,27rem)]" style="--i:0;--d:1.2s">Gregory</span></span>
+    <span class="line ml-[14vw] md:ml-[34vw]"><span class="block text-[clamp(4.6rem,23vw,27rem)] italic text-gold-deep" style="--i:1;--d:1.2s">Jewels</span></span>
+  </h1>
+
+  <!-- tall crop, sits behind the type -->
+  <div class="frame absolute right-[8vw] top-[22vh] z-10 aspect-[2/5] w-[34vw] max-w-[360px] md:right-auto md:left-[56vw] md:top-[12vh] md:aspect-[3/5] md:w-[24vw]" data-mask style="--d:.4s">
+    <img class="hero-pic" src="img/gallery-collana-pietra-colore.jpg" alt="Collane in oro con una pietra blu sfaccettata e un ciondolo a mezzaluna" width="900" height="1350" fetchpriority="high" decoding="async">
+  </div>
+  <!-- small overlapping crop -->
+  <div class="frame absolute bottom-[16vh] left-[6vw] z-30 aspect-square w-[34vw] max-w-[280px] md:bottom-[10vh] md:left-[14vw] md:w-[15vw]" data-mask style="--d:.9s">
+    <img src="img/gallery-anello-solitario.jpg" alt="Anello con diamante e contorno di brillanti su un piano nero" width="900" height="600" decoding="async" class="object-[48%_50%]">
+  </div>
+
+  <p class="hero-fade absolute bottom-10 right-5 z-30 max-w-[24ch] text-right text-[.78rem] leading-[1.8] sm:right-10 lg:right-14" style="--d:2.4s">
+    Gioielli d'autore, disegnati e costruiti a mano. Pezzi unici e commissioni.
+  </p>
+  <p class="hero-fade absolute bottom-10 left-5 z-30 hidden text-[.7rem] uppercase tracking-[.22em] md:block sm:left-10 lg:left-14" style="--d:2.4s">(Scorri)</p>
+</section>
+
+<!-- ============ 2. MANIFESTO ============ -->
+<section class="px-5 py-32 sm:px-10 md:py-52 lg:px-14">
+  <p class="eyebrow mb-10 text-gold-deep" data-reveal>Manifesto</p>
+  <p class="max-w-[22ch] font-display text-[clamp(2.6rem,7vw,7.6rem)] leading-[.98] tracking-[-.02em] md:max-w-[17ch]" data-reveal>
+    Ogni pezzo ha un'<em class="text-gold-deep">intenzione</em>, una mano e un tempo.
+  </p>
+  <p class="ml-auto mt-14 max-w-[40ch] text-[.95rem] leading-[1.9] text-mute md:mt-20" data-reveal>
+    Non facciamo collezioni per riempire una vetrina. Facciamo oggetti che hanno una ragione: un disegno, una pietra, qualcuno che li porterà.
+  </p>
+</section>
+
+<!-- ============ 3. OPERE SCELTE (scorrimento orizzontale) ============ -->
+<section id="opere" class="overflow-hidden pb-32 md:pb-48" aria-labelledby="opere-t">
+  <div class="mb-12 flex items-end justify-between px-5 sm:px-10 lg:px-14">
+    <h2 id="opere-t" class="font-display text-[clamp(2.4rem,6vw,6rem)] leading-none" data-reveal>Opere scelte</h2>
+    <div class="flex gap-2" role="group" aria-label="Scorri le opere">
+      <button type="button" data-scroll="-1" class="grid size-12 place-items-center border border-ink/30 text-lg transition hover:bg-ink hover:text-white" aria-label="Opera precedente">←</button>
+      <button type="button" data-scroll="1" class="grid size-12 place-items-center border border-ink/30 text-lg transition hover:bg-ink hover:text-white" aria-label="Opera successiva">→</button>
+    </div>
+  </div>
+
+  <div id="rail" tabindex="0" role="region" aria-label="Opere scelte, scorrimento orizzontale" class="no-scrollbar flex snap-x snap-mandatory scroll-px-5 items-start gap-5 overflow-x-auto px-5 pb-4 sm:scroll-px-10 sm:gap-8 sm:px-10 lg:scroll-px-14 lg:px-14">
+    <figure class="w-[72vw] shrink-0 snap-start sm:w-[44vw] lg:w-[26vw]" data-cursor="Vedi">
+      <div class="frame aspect-[2/3]"><img src="img/bespoke-bozzetto-rubini.jpg" alt="Anello con rubini accanto ai bozzetti a colori" width="900" height="1349" loading="lazy" decoding="async"></div>
+      <figcaption class="mt-4 flex justify-between text-[.7rem] uppercase tracking-[.2em]"><span>01 · Rubini</span><span class="text-mute">Su misura</span></figcaption>
+    </figure>
+    <figure class="mt-16 w-[56vw] shrink-0 snap-start sm:w-[34vw] lg:mt-28 lg:w-[20vw]" data-cursor="Vedi">
+      <div class="frame aspect-square"><img src="img/filosofia-orecchini-oro.jpg" alt="Orecchini a cerchio in oro intrecciato su una pietra bianca" width="1200" height="1800" loading="lazy" decoding="async" class="object-[50%_80%]"></div>
+      <figcaption class="mt-4 flex justify-between text-[.7rem] uppercase tracking-[.2em]"><span>02 · Intreccio</span><span class="text-mute">Oro</span></figcaption>
+    </figure>
+    <figure class="w-[80vw] shrink-0 snap-start sm:w-[56vw] lg:w-[38vw]" data-cursor="Vedi">
+      <div class="frame aspect-[4/5]"><img src="img/bespoke-bozzetto-collier.jpg" alt="Collier in oro con smeraldi accanto al suo bozzetto" width="1200" height="1798" loading="lazy" decoding="async"></div>
+      <figcaption class="mt-4 flex justify-between text-[.7rem] uppercase tracking-[.2em]"><span>03 · Collier</span><span class="text-mute">Oro e smeraldi</span></figcaption>
+    </figure>
+    <figure class="mt-24 w-[64vw] shrink-0 snap-start sm:w-[36vw] lg:mt-12 lg:w-[22vw]" data-cursor="Vedi">
+      <div class="frame aspect-[3/2]"><img src="img/gallery-bracciale-oro.jpg" alt="Bracciale rigido in oro con un motivo a goccia e brillanti" width="900" height="600" loading="lazy" decoding="async"></div>
+      <figcaption class="mt-4 flex justify-between text-[.7rem] uppercase tracking-[.2em]"><span>04 · Bracciale</span><span class="text-mute">Oro bianco e giallo</span></figcaption>
+    </figure>
+    <figure class="w-[66vw] shrink-0 snap-start sm:w-[40vw] lg:w-[24vw]" data-cursor="Vedi">
+      <div class="frame aspect-[2/3]"><img src="img/gallery-orecchini-pendenti.jpg" alt="Orecchini pendenti con zaffiro blu su una foglia verde" width="900" height="1350" loading="lazy" decoding="async"></div>
+      <figcaption class="mt-4 flex justify-between text-[.7rem] uppercase tracking-[.2em]"><span>05 · Pendenti</span><span class="text-mute">Zaffiro</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 4. SEQUENZA VISIVA ============ -->
+<section class="relative overflow-hidden bg-ink py-32 text-white md:py-52" aria-label="Dal disegno al gioiello">
+  <div class="relative mx-auto max-w-[1872px] px-5 sm:px-10 lg:px-14">
+    <div class="grid items-start gap-y-10 md:grid-cols-12">
+      <div class="frame aspect-[4/5] md:col-span-4" data-mask>
+        <img src="img/bespoke-bozzetto-collier.jpg" alt="" width="1200" height="1798" loading="lazy" decoding="async" class="object-[30%_20%]">
+      </div>
+      <p class="relative z-10 font-display text-[clamp(2.6rem,7vw,7rem)] italic leading-[.95] md:col-span-7 md:col-start-6 md:mt-[18vh]" data-reveal>dal disegno</p>
+    </div>
+    <div class="mt-10 grid items-end gap-y-10 md:-mt-6 md:grid-cols-12">
+      <p class="order-2 font-display text-[clamp(2.6rem,7vw,7rem)] italic leading-[.95] md:order-1 md:col-span-6 md:col-start-2" data-reveal>alla fiamma</p>
+      <div class="frame order-1 aspect-[3/4] md:order-2 md:col-span-3 md:col-start-9" data-mask>
+        <img src="img/lab-fusione-fiamma.jpg" alt="Una fiamma azzurra scalda un anello d'oro" width="900" height="675" loading="lazy" decoding="async" class="object-[38%_50%]">
+      </div>
+    </div>
+    <div class="mt-20 grid items-start gap-y-10 md:grid-cols-12">
+      <div class="frame aspect-[16/10] md:col-span-6 md:col-start-3" data-mask>
+        <img src="img/storia-mani-artigiane.jpg" alt="Due mani intrecciano una fascia di perle d'oro" width="1200" height="800" loading="lazy" decoding="async">
+      </div>
+      <p class="relative z-10 font-display text-[clamp(2.6rem,7vw,7rem)] italic leading-[.95] text-gold md:col-span-3 md:col-start-9 md:mt-[24vh] md:-ml-[10vw]" data-reveal>alla pietra.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. PROCESSO ============ -->
+<section id="processo" class="px-5 py-32 sm:px-10 md:py-52 lg:px-14">
+  <div class="mx-auto max-w-[1760px]">
+    <h2 class="mb-16 font-display text-[clamp(2.4rem,6vw,6rem)] leading-none md:mb-28" data-reveal>Processo</h2>
+    <ol class="border-t border-ink/20">
+      <li class="grid items-baseline gap-x-8 gap-y-3 border-b border-ink/20 py-8 md:grid-cols-12 md:py-12" data-reveal>
+        <span class="font-display text-5xl italic text-gold-deep md:col-span-2 md:text-7xl">I</span>
+        <h3 class="font-display text-3xl md:col-span-4 md:text-5xl">Il bozzetto</h3>
+        <p class="max-w-[46ch] text-[.95rem] leading-[1.9] text-mute md:col-span-5 md:col-start-8">Si parte ascoltando. Poi matita, colore, proporzioni, finché il disegno regge da solo.</p>
+      </li>
+      <li class="grid items-baseline gap-x-8 gap-y-3 border-b border-ink/20 py-8 md:grid-cols-12 md:py-12" data-reveal>
+        <span class="font-display text-5xl italic text-gold-deep md:col-span-2 md:text-7xl">II</span>
+        <h3 class="font-display text-3xl md:col-span-4 md:text-5xl">La fusione</h3>
+        <p class="max-w-[46ch] text-[.95rem] leading-[1.9] text-mute md:col-span-5 md:col-start-8">Il metallo prende forma sul banco, alla fiamma, saldatura dopo saldatura.</p>
+      </li>
+      <li class="grid items-baseline gap-x-8 gap-y-3 border-b border-ink/20 py-8 md:grid-cols-12 md:py-12" data-reveal>
+        <span class="font-display text-5xl italic text-gold-deep md:col-span-2 md:text-7xl">III</span>
+        <h3 class="font-display text-3xl md:col-span-4 md:text-5xl">La pietra</h3>
+        <p class="max-w-[46ch] text-[.95rem] leading-[1.9] text-mute md:col-span-5 md:col-start-8">Scelta a occhio, con la lente. Poi l'incastonatura, il gesto più piccolo e il meno perdonabile.</p>
+      </li>
+      <li class="grid items-baseline gap-x-8 gap-y-3 border-b border-ink/20 py-8 md:grid-cols-12 md:py-12" data-reveal>
+        <span class="font-display text-5xl italic text-gold-deep md:col-span-2 md:text-7xl">IV</span>
+        <h3 class="font-display text-3xl md:col-span-4 md:text-5xl">La consegna</h3>
+        <p class="max-w-[46ch] text-[.95rem] leading-[1.9] text-mute md:col-span-5 md:col-start-8">Il pezzo viene provato, aggiustato e consegnato a mano.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 6. STUDIO / ATELIER ============ -->
+<section id="studio" class="bg-bone px-5 py-32 sm:px-10 md:py-52 lg:px-14">
+  <div class="mx-auto grid max-w-[1760px] items-center gap-14 lg:grid-cols-12 lg:gap-8">
+    <div class="lg:col-span-5">
+      <p class="eyebrow mb-8 text-gold-deep" data-reveal>Lo studio</p>
+      <h2 class="font-display text-[clamp(2.4rem,5vw,5rem)] leading-[1.02]" data-reveal>Un banco, una lente, <em>molta luce.</em></h2>
+      <p class="mt-8 max-w-[42ch] text-[.95rem] leading-[1.9] text-mute" data-reveal>L'atelier è piccolo di proposito. Si lavora su pochi pezzi per volta, e si possono vedere nascere.</p>
+      <a href="#contatti" class="u-link mt-10 text-[.7rem] uppercase tracking-[.22em]" data-reveal>Visita su appuntamento</a>
+    </div>
+    <div class="relative lg:col-span-6 lg:col-start-7">
+      <div class="frame aspect-[4/5] w-[78%] lg:ml-auto" data-mask>
+        <img src="img/lab-banco-strumenti.jpg" alt="Il banco dell'atelier: filo, pinze, chiusure e componenti in oro" width="900" height="1125" loading="lazy" decoding="async">
+      </div>
+      <div class="frame absolute -bottom-10 left-0 aspect-[3/2] w-[52%]" data-mask style="--d:.3s">
+        <img src="img/lab-saldatura-flusso.jpg" alt="Un orafo salda un anello alla fiamma" width="900" height="675" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. PROGETTO IN EVIDENZA ============ -->
+<section class="px-5 py-32 sm:px-10 md:py-52 lg:px-14" aria-labelledby="prog">
+  <div class="mx-auto max-w-[1760px]">
+    <p class="eyebrow mb-8 text-gold-deep" data-reveal>Progetto in evidenza</p>
+    <div class="grid gap-14 lg:grid-cols-12 lg:gap-8">
+      <h2 id="prog" class="font-display text-[clamp(3rem,9vw,9.5rem)] leading-[.9] tracking-[-.02em] lg:col-span-7" data-lines>
+        <span class="line"><span style="--i:0">Collier</span></span>
+        <span class="line"><span style="--i:1" class="italic text-gold-deep">con smeraldi</span></span>
+      </h2>
+      <p class="max-w-[38ch] self-end text-[.95rem] leading-[1.9] text-mute lg:col-span-4 lg:col-start-9" data-reveal>Commissione su disegno. Dal bozzetto a matita all'oro finito, con lente e pinze ancora sul tavolo. Il progetto è lì, accanto al gioiello.</p>
+    </div>
+    <div class="frame mt-14 aspect-[4/5] sm:aspect-[16/10]" data-mask>
+      <img src="img/bespoke-bozzetto-collier.jpg" alt="Collier in oro con smeraldi, orecchini, bracciale e anello, accanto al bozzetto" width="1200" height="1798" loading="lazy" decoding="async" class="object-[50%_62%]">
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. CHIUSURA ============ -->
+<section id="contatti" class="bg-ink px-5 py-32 text-white sm:px-10 md:py-52 lg:px-14">
+  <div class="mx-auto max-w-[1760px]">
+    <p class="font-display text-[clamp(3rem,12vw,13rem)] leading-[.88] tracking-[-.03em]" data-lines>
+      <span class="line"><span style="--i:0">Pezzi con</span></span>
+      <span class="line"><span style="--i:1" class="italic text-gold">intenzione.</span></span>
+    </p>
+    <div class="mt-16 flex flex-col justify-between gap-10 md:mt-28 md:flex-row md:items-end">
+      <a href="mailto:info@gregoryjewels.com" class="u-link u-link--rest w-fit font-display text-[clamp(1.6rem,3vw,3rem)] italic" data-reveal>info@gregoryjewels.com</a>
+      <p class="max-w-[34ch] text-[.85rem] leading-[1.9] text-white/65" data-reveal>Per una commissione, un restauro o semplicemente per vedere i pezzi: scrivici, rispondiamo di persona.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="bg-ink px-5 pb-24 pt-4 text-white sm:px-10 lg:px-14">
+  <div class="mx-auto flex max-w-[1760px] flex-col gap-6 border-t border-white/15 pt-8 text-[.7rem] uppercase tracking-[.2em] text-white/65 md:flex-row md:justify-between">
+    <span>© <span data-year>2026</span> Gregory Jewels · P.IVA 00000000000</span>
+    <nav aria-label="Footer" class="flex gap-8">
+      <a class="u-link" href="https://www.instagram.com/gregoryjewels/" target="_blank" rel="noopener">Instagram</a>
+      <a class="u-link" href="#">Privacy</a><a class="u-link" href="#">Cookie</a>
+    </nav>
+  </div>
+</footer>
+
+<nav class="switcher flex gap-px bg-ink/90 text-[.62rem] uppercase tracking-[.2em] text-white" aria-label="Cambia concept">
+  <a class="px-4 py-3 hover:bg-white/10" href="concept-1.html">01 Maison</a>
+  <a class="px-4 py-3 bg-gold text-ink" href="concept-2.html" aria-current="page">02 Atelier</a>
+  <a class="px-4 py-3 hover:bg-white/10" href="concept-3.html">03 Moderno</a>
+</nav>
+
+<script src="js/site.js" defer></script>
+<script>
+  (function () {
+    var rail = document.getElementById('rail');
+    document.querySelectorAll('[data-scroll]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var step = rail.querySelector('figure').getBoundingClientRect().width + 32;
+        rail.scrollBy({ left: step * Number(b.dataset.scroll), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      });
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gregory Jewels — Concept 03, Modern Luxury</title>
+<meta name="description" content="Gregory Jewels. Alta gioielleria contemporanea, fatta a mano in Italia.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/cormorant-400.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body class="bg-paper">
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:bg-ink focus:text-white focus:px-4 focus:py-2">Vai al contenuto</a>
+
+<!-- ============ 1. NAV ============ -->
+<header data-header class="group fixed inset-x-0 top-0 z-[70] text-white transition-[background-color,color] duration-700 ease-lux [&.is-scrolled]:bg-paper [&.is-scrolled]:text-ink [&.is-scrolled]:shadow-[0_1px_0_var(--color-line)]">
+  <div class="hero-fade mx-auto grid max-w-[1872px] grid-cols-[auto_1fr_auto] items-center gap-8 px-5 py-5 sm:px-10 lg:px-14" style="--d:2.2s">
+    <a href="concept-3.html" aria-label="Gregory Jewels — inizio pagina" class="flex items-center gap-3">
+      <img class="h-9 w-auto group-[.is-scrolled]:hidden" src="img/logo-mark-light.png" alt="" width="30" height="44">
+      <img class="hidden h-9 w-auto group-[.is-scrolled]:block" src="img/logo-mark.png" alt="" width="30" height="44">
+      <span class="whitespace-nowrap font-display text-[.98rem] tracking-[.2em] sm:text-xl sm:tracking-[.24em]">GREGORY JEWELS</span>
+    </a>
+    <nav aria-label="Principale" class="hidden justify-center gap-10 text-[.7rem] uppercase tracking-[.2em] lg:flex">
+      <a class="u-link" href="#collezione">Collezione</a>
+      <a class="u-link" href="#storia">Storia</a>
+      <a class="u-link" href="#dettagli">Dettagli</a>
+      <a class="u-link" href="#atelier">Atelier</a>
+      <a class="u-link" href="#opere">Opere</a>
+    </nav>
+    <div class="col-start-3 flex items-center gap-6 text-[.7rem] uppercase tracking-[.2em]">
+      <a href="#contatti" class="hidden border border-current px-5 py-3 transition-colors duration-500 hover:bg-gold hover:text-ink hover:border-gold sm:inline-block">Prenota</a>
+      <button data-menu-toggle type="button" aria-expanded="false" aria-controls="menu" aria-label="Apri il menu" class="-mr-2 inline-flex min-h-11 items-center px-2 uppercase tracking-[.2em] lg:hidden">Menu</button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu class="invisible fixed inset-0 z-[60] flex flex-col bg-ink px-6 pb-10 pt-24 text-white opacity-0 transition-[opacity,visibility] duration-700 ease-lux [&.is-open]:visible [&.is-open]:opacity-100 lg:hidden">
+  <nav aria-label="Menu" class="flex flex-1 flex-col justify-center divide-y divide-white/15 font-display text-[clamp(2rem,9vw,3rem)]">
+    <a class="py-4" href="#collezione">Collezione</a><a class="py-4" href="#storia">Storia</a><a class="py-4" href="#dettagli">Dettagli</a><a class="py-4" href="#atelier">Atelier</a><a class="py-4" href="#opere">Opere</a><a class="py-4 text-gold" href="#contatti">Prenota un appuntamento</a>
+  </nav>
+</div>
+
+<main id="main">
+
+<!-- ============ 2. HERO CINEMATOGRAFICO ============ -->
+<section class="relative h-[100svh] min-h-[560px] bg-paper" aria-label="Apertura">
+  <div class="hero-frame absolute inset-0 overflow-hidden bg-ink">
+    <video id="film" class="hero-pic h-full w-full object-cover" src="video/video_gioiello_gregory.mp4" poster="img/hero-contatti.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+    <div class="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-ink/35"></div>
+  </div>
+  <div class="absolute inset-x-0 bottom-0 text-white">
+    <div class="mx-auto grid max-w-[1872px] items-end gap-6 px-5 pb-8 sm:px-10 md:grid-cols-12 lg:px-14 lg:pb-12">
+      <h1 class="hero-lines font-display text-[clamp(2.8rem,7.6vw,8rem)] font-normal leading-[.96] tracking-[-.015em] md:col-span-8">
+        <span class="line"><span style="--i:0;--d:1.9s">Alta gioielleria,</span></span>
+        <span class="line"><span style="--i:1;--d:1.9s" class="italic">senza rumore.</span></span>
+      </h1>
+      <div class="hero-fade flex items-center justify-between gap-6 text-[.7rem] uppercase tracking-[.2em] md:col-span-4 md:justify-end" style="--d:2.7s">
+        <span class="text-white/70">Italia · Su misura</span>
+        <a href="#collezione" class="u-link">Scopri</a>
+      </div>
+      <div class="hero-rule h-px bg-white/40 md:col-span-12" style="--d:2.3s"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. INTRODUZIONE ============ -->
+<section class="mx-auto max-w-[1872px] px-5 py-28 sm:px-10 md:py-44 lg:px-14">
+  <div class="grid gap-14 lg:grid-cols-12 lg:gap-8">
+    <p class="text-[.7rem] uppercase tracking-[.2em] text-gold-deep lg:col-span-2" data-reveal>01 — La maison</p>
+    <h2 class="font-display text-[clamp(2rem,4.2vw,4.4rem)] leading-[1.1] tracking-[-.01em] lg:col-span-8 lg:col-start-4" data-reveal>
+      Disegniamo pezzi che si riconoscono per le proporzioni, non per il marchio. Pochi, fatti bene, da portare a lungo.
+    </h2>
+  </div>
+  <dl class="mt-20 grid border-t border-line md:mt-32 md:grid-cols-3">
+    <div class="border-b border-line py-8 md:border-b-0 md:border-r md:px-8 md:first:pl-0 md:last:border-r-0" data-reveal>
+      <dt class="text-[.7rem] uppercase tracking-[.2em] text-gold-deep">Mano</dt>
+      <dd class="mt-3 font-display text-3xl">Artigianalità italiana</dd>
+    </div>
+    <div class="border-b border-line py-8 md:border-b-0 md:border-r md:px-8" data-reveal style="--d:.12s">
+      <dt class="text-[.7rem] uppercase tracking-[.2em] text-gold-deep">Materia</dt>
+      <dd class="mt-3 font-display text-3xl">Pietre rare, diamanti etici</dd>
+    </div>
+    <div class="py-8 md:px-8 md:last:pr-0" data-reveal style="--d:.24s">
+      <dt class="text-[.7rem] uppercase tracking-[.2em] text-gold-deep">Misura</dt>
+      <dd class="mt-3 font-display text-3xl">Pezzi unici e su misura</dd>
+    </div>
+  </dl>
+</section>
+
+<!-- ============ 4. COLLEZIONE IN EVIDENZA ============ -->
+<section id="collezione" class="bg-bone py-28 md:py-44" aria-labelledby="col-t">
+  <div class="mx-auto grid max-w-[1872px] gap-12 px-5 sm:px-10 lg:grid-cols-12 lg:gap-8 lg:px-14">
+    <div class="lg:col-span-7">
+      <div class="frame aspect-[4/5] sm:aspect-[5/4] lg:aspect-[6/5]" data-mask-x id="stage">
+        <img data-slide="collane" class="absolute inset-0 object-[50%_24%] transition-opacity duration-[900ms] ease-lux" src="img/gallery-collana-pietra-colore.jpg" alt="Tre collane in oro con una pietra blu sfaccettata e un ciondolo a mezzaluna" width="900" height="1350" loading="lazy" decoding="async">
+        <img data-slide="anelli" class="absolute inset-0 opacity-0 transition-opacity duration-[900ms] ease-lux" src="img/gallery-anello-solitario.jpg" alt="Anello solitario in oro bianco e rosa con diamante e contorno di brillanti" width="900" height="600" loading="lazy" decoding="async">
+        <img data-slide="bracciali" class="absolute inset-0 opacity-0 transition-opacity duration-[900ms] ease-lux" src="img/gallery-bracciale-oro.jpg" alt="Bracciale rigido in oro con un motivo a goccia e brillanti" width="900" height="600" loading="lazy" decoding="async">
+        <img data-slide="orecchini" class="absolute inset-0 object-[50%_42%] opacity-0 transition-opacity duration-[900ms] ease-lux" src="img/gallery-orecchini-pendenti.jpg" alt="Orecchini pendenti con zaffiro blu e cristalli su una foglia verde" width="900" height="1350" loading="lazy" decoding="async">
+      </div>
+    </div>
+    <div class="flex flex-col justify-between lg:col-span-4 lg:col-start-9">
+      <div>
+        <p class="text-[.7rem] uppercase tracking-[.2em] text-gold-deep" data-reveal>02 — Collezione</p>
+        <h2 id="col-t" class="mt-6 font-display text-[clamp(2.4rem,4.4vw,4.4rem)] leading-[1.02]" data-reveal>Quattro famiglie di pezzi.</h2>
+      </div>
+      <ul class="mt-12 border-t border-ink/15 lg:mt-0" id="pieces">
+        <li><a href="#opere" data-target="collane" class="group/p flex items-baseline justify-between border-b border-ink/15 py-5 font-display text-3xl transition-[padding] duration-500 ease-lux hover:pl-3 focus-visible:pl-3 md:text-4xl"><span>Collane</span><span class="text-[.7rem] uppercase tracking-[.2em] text-mute transition-colors group-hover/p:text-gold-deep">01</span></a></li>
+        <li><a href="#opere" data-target="anelli" class="group/p flex items-baseline justify-between border-b border-ink/15 py-5 font-display text-3xl transition-[padding] duration-500 ease-lux hover:pl-3 focus-visible:pl-3 md:text-4xl"><span>Anelli</span><span class="text-[.7rem] uppercase tracking-[.2em] text-mute transition-colors group-hover/p:text-gold-deep">02</span></a></li>
+        <li><a href="#opere" data-target="bracciali" class="group/p flex items-baseline justify-between border-b border-ink/15 py-5 font-display text-3xl transition-[padding] duration-500 ease-lux hover:pl-3 focus-visible:pl-3 md:text-4xl"><span>Bracciali</span><span class="text-[.7rem] uppercase tracking-[.2em] text-mute transition-colors group-hover/p:text-gold-deep">03</span></a></li>
+        <li><a href="#opere" data-target="orecchini" class="group/p flex items-baseline justify-between border-b border-ink/15 py-5 font-display text-3xl transition-[padding] duration-500 ease-lux hover:pl-3 focus-visible:pl-3 md:text-4xl"><span>Orecchini</span><span class="text-[.7rem] uppercase tracking-[.2em] text-mute transition-colors group-hover/p:text-gold-deep">04</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. STORIA EDITORIALE ============ -->
+<section id="storia" class="mx-auto grid max-w-[1872px] items-center gap-14 px-5 py-28 sm:px-10 md:py-44 lg:grid-cols-12 lg:gap-8 lg:px-14">
+  <div class="lg:col-span-5 lg:col-start-1">
+    <p class="text-[.7rem] uppercase tracking-[.2em] text-gold-deep" data-reveal>03 — Storia</p>
+    <h2 class="mt-6 font-display text-[clamp(2.2rem,4vw,4.2rem)] leading-[1.06]" data-reveal>Dare forma a ciò che si ricorda.</h2>
+    <p class="mt-8 max-w-[44ch] text-[.95rem] leading-[1.9] text-mute" data-reveal>
+      Un gioiello è un modo di tenere insieme un giorno, una persona, un luogo. Per questo ogni commissione comincia da una conversazione, non da un listino.
+    </p>
+  </div>
+  <div class="lg:col-span-6 lg:col-start-7">
+    <div class="frame aspect-[3/2]" data-mask-x>
+      <img src="img/storia-mani-artigiane.jpg" alt="Dall'alto, due mani lavorano una fascia di perle d'oro su un telaio" width="1200" height="800" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. DETTAGLI ============ -->
+<section id="dettagli" class="bg-ink py-28 text-white md:py-44" aria-labelledby="det-t">
+  <div class="mx-auto max-w-[1872px] px-5 sm:px-10 lg:px-14">
+    <div class="mb-14 flex items-end justify-between md:mb-20">
+      <h2 id="det-t" class="font-display text-[clamp(2.2rem,4.6vw,4.6rem)] leading-none" data-reveal>Dettagli</h2>
+      <p class="hidden text-[.7rem] uppercase tracking-[.2em] text-white/60 md:block" data-reveal>04 — Da vicino</p>
+    </div>
+    <div class="grid gap-x-6 gap-y-12 sm:grid-cols-3">
+      <figure data-reveal>
+        <div class="frame aspect-[3/4] bg-ink-soft"><img class="origin-[48%_44%] scale-[2.1]" src="img/gallery-anello-solitario.jpg" alt="Dettaglio ravvicinato di un diamante con il suo contorno di brillanti" width="900" height="600" loading="lazy" decoding="async"></div>
+        <figcaption class="mt-4 flex justify-between text-[.7rem] uppercase tracking-[.2em]"><span>Pavé</span><span class="text-white/55">Brillanti</span></figcaption>
+      </figure>
+      <figure data-reveal style="--d:.12s">
+        <div class="frame aspect-[3/4] bg-ink-soft"><img class="origin-[47%_26%] scale-[2.6]" src="img/gallery-collana-pietra-colore.jpg" alt="Dettaglio di una pietra blu sfaccettata, incastonata in oro" width="900" height="1350" loading="lazy" decoding="async"></div>
+        <figcaption class="mt-4 flex justify-between text-[.7rem] uppercase tracking-[.2em]"><span>Taglio</span><span class="text-white/55">Pietra di colore</span></figcaption>
+      </figure>
+      <figure data-reveal style="--d:.24s">
+        <div class="frame aspect-[3/4] bg-ink-soft"><img class="origin-[52%_73%] scale-[2.4]" src="img/filosofia-orecchini-oro.jpg" alt="Dettaglio di un orecchino a cerchio in oro intrecciato" width="1200" height="1800" loading="lazy" decoding="async"></div>
+        <figcaption class="mt-4 flex justify-between text-[.7rem] uppercase tracking-[.2em]"><span>Intreccio</span><span class="text-white/55">Oro</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. ARTIGIANALITÀ ============ -->
+<section id="atelier" class="mx-auto max-w-[1872px] px-5 py-28 sm:px-10 md:py-44 lg:px-14" aria-labelledby="art-t">
+  <div class="mb-16 grid gap-8 md:mb-24 lg:grid-cols-12">
+    <p class="text-[.7rem] uppercase tracking-[.2em] text-gold-deep lg:col-span-2" data-reveal>05 — Atelier</p>
+    <h2 id="art-t" class="font-display text-[clamp(2.2rem,4.4vw,4.4rem)] leading-[1.05] lg:col-span-7 lg:col-start-4" data-reveal>Quattro gesti, nello stesso ordine, ogni volta.</h2>
+  </div>
+  <ol class="grid gap-12 md:grid-cols-4 md:gap-8">
+    <li data-reveal><div class="draw mb-6 h-px bg-ink" data-reveal-line></div><span class="text-[.7rem] uppercase tracking-[.2em] text-gold-deep">01</span><h3 class="mt-3 font-display text-3xl">Disegno</h3><p class="mt-3 text-[.9rem] leading-[1.8] text-mute">Un bozzetto a matita, poi a colori. Si approva sulla carta.</p></li>
+    <li data-reveal style="--d:.12s"><div class="draw mb-6 h-px bg-ink"></div><span class="text-[.7rem] uppercase tracking-[.2em] text-gold-deep">02</span><h3 class="mt-3 font-display text-3xl">Fusione</h3><p class="mt-3 text-[.9rem] leading-[1.8] text-mute">Il metallo si scalda, si salda, prende la forma del disegno.</p></li>
+    <li data-reveal style="--d:.24s"><div class="draw mb-6 h-px bg-ink"></div><span class="text-[.7rem] uppercase tracking-[.2em] text-gold-deep">03</span><h3 class="mt-3 font-display text-3xl">Incastonatura</h3><p class="mt-3 text-[.9rem] leading-[1.8] text-mute">Ogni pietra al suo posto, con la lente e con calma.</p></li>
+    <li data-reveal style="--d:.36s"><div class="draw mb-6 h-px bg-ink"></div><span class="text-[.7rem] uppercase tracking-[.2em] text-gold-deep">04</span><h3 class="mt-3 font-display text-3xl">Finitura</h3><p class="mt-3 text-[.9rem] leading-[1.8] text-mute">Lucidatura, controllo, consegna di persona.</p></li>
+  </ol>
+  <div class="mt-20 grid gap-6 md:mt-28 md:grid-cols-12 md:gap-8">
+    <div class="frame aspect-[4/3] md:col-span-7" data-mask-x><img src="img/lab-fusione-fiamma.jpg" alt="Una fiamma scalda un anello d'oro su un blocco di lavoro" width="900" height="675" loading="lazy" decoding="async"></div>
+    <div class="frame aspect-[4/3] md:col-span-5 md:mt-24" data-mask-x style="--d:.2s"><img src="img/lab-saldatura-flusso.jpg" alt="Saldatura di un anello con il flusso sul blocco" width="900" height="675" loading="lazy" decoding="async"></div>
+  </div>
+</section>
+
+<!-- ============ 8. FILOSOFIA ============ -->
+<section class="bg-stone px-5 py-32 text-center sm:px-10 md:py-52 lg:px-14" aria-label="Filosofia">
+  <img class="mx-auto mb-12 h-16 w-auto" src="img/logo-mark.png" alt="" width="30" height="44" loading="lazy" data-reveal>
+  <p class="mx-auto max-w-[24ch] font-display text-[clamp(2rem,4.6vw,4.8rem)] italic leading-[1.1]" data-reveal>
+    Creazioni uniche che custodiscono emozioni senza tempo.
+  </p>
+  <p class="mt-10 text-[.7rem] uppercase tracking-[.2em] text-gold-deep" data-reveal>06 — Filosofia</p>
+</section>
+
+<!-- ============ 9. OPERE ============ -->
+<section id="opere" class="mx-auto max-w-[1872px] px-5 py-28 sm:px-10 md:py-44 lg:px-14" aria-labelledby="op-t">
+  <div class="mb-14 flex items-end justify-between md:mb-20">
+    <h2 id="op-t" class="font-display text-[clamp(2.2rem,4.6vw,4.6rem)] leading-none" data-reveal>Opere</h2>
+    <a href="https://www.instagram.com/gregoryjewels/" target="_blank" rel="noopener" class="u-link text-[.7rem] uppercase tracking-[.2em]" data-reveal>Tutte su Instagram ↗</a>
+  </div>
+  <div class="grid items-start gap-6 md:grid-cols-12 md:gap-8">
+    <a href="#contatti" class="group/o md:col-span-7">
+      <div class="frame aspect-[4/5]" data-mask-x><img src="img/bespoke-bozzetto-collier.jpg" alt="Collier in oro con smeraldi accanto al suo bozzetto" width="1200" height="1798" loading="lazy" decoding="async"></div>
+      <p class="mt-4 flex justify-between text-[.7rem] uppercase tracking-[.2em]"><span>Collier con smeraldi</span><span class="text-mute transition-transform duration-500 group-hover/o:translate-x-1">Su misura →</span></p>
+    </a>
+    <a href="#contatti" class="group/o md:col-span-5 md:mt-40">
+      <div class="frame aspect-[2/3]" data-mask-x style="--d:.2s"><img src="img/bespoke-bozzetto-rubini.jpg" alt="Anello con rubini accanto ai bozzetti a colori" width="900" height="1349" loading="lazy" decoding="async"></div>
+      <p class="mt-4 flex justify-between text-[.7rem] uppercase tracking-[.2em]"><span>Anello con rubini</span><span class="text-mute transition-transform duration-500 group-hover/o:translate-x-1">Su misura →</span></p>
+    </a>
+  </div>
+</section>
+
+<!-- ============ 10. CTA FINALE ============ -->
+<section id="contatti" class="border-t border-line" aria-label="Contatti">
+  <a href="mailto:info@gregoryjewels.com" class="group/cta relative block overflow-hidden px-5 py-20 sm:px-10 md:py-36 lg:px-14">
+    <span class="absolute inset-0 origin-bottom scale-y-0 bg-ink transition-transform duration-700 ease-cine group-hover/cta:scale-y-100 group-focus-visible/cta:scale-y-100" aria-hidden="true"></span>
+    <span class="relative mx-auto flex max-w-[1760px] flex-col gap-6 transition-colors duration-700 group-hover/cta:text-white group-focus-visible/cta:text-white md:flex-row md:items-end md:justify-between">
+      <span>
+        <span class="block text-[.7rem] uppercase tracking-[.2em] text-gold-deep">07 — Contatti</span>
+        <span class="mt-5 block font-display text-[clamp(2.6rem,8vw,8.5rem)] leading-[.98] tracking-[-.015em]">Prenota un<br><em>appuntamento privato</em></span>
+      </span>
+      <span class="font-display text-5xl transition-transform duration-700 ease-lux group-hover/cta:translate-x-3 md:text-7xl" aria-hidden="true">→</span>
+    </span>
+  </a>
+</section>
+</main>
+
+<!-- ============ 11. FOOTER ============ -->
+<footer class="bg-ink px-5 pb-24 pt-16 text-white sm:px-10 lg:px-14">
+  <div class="mx-auto grid max-w-[1760px] gap-12 md:grid-cols-12">
+    <div class="md:col-span-5">
+      <img class="h-12 w-auto" src="img/logo-mark-light.png" alt="Gregory Jewels" width="30" height="44" loading="lazy">
+      <p class="mt-6 max-w-[30ch] font-display text-2xl italic text-white/80">Creazioni uniche che custodiscono emozioni senza tempo.</p>
+    </div>
+    <nav aria-label="Footer" class="grid grid-cols-2 gap-8 text-[.75rem] uppercase tracking-[.18em] text-white/70 md:col-span-6 md:col-start-7">
+      <ul class="space-y-3"><li><a class="u-link" href="#collezione">Collezione</a></li><li><a class="u-link" href="#storia">Storia</a></li><li><a class="u-link" href="#atelier">Atelier</a></li></ul>
+      <ul class="space-y-3"><li><a class="u-link" href="https://www.instagram.com/gregoryjewels/" target="_blank" rel="noopener">Instagram</a></li><li><a class="u-link" href="mailto:info@gregoryjewels.com">Email</a></li><li><a class="u-link" href="#">Privacy · Cookie</a></li></ul>
+    </nav>
+  </div>
+  <p class="mx-auto mt-16 max-w-[1760px] border-t border-white/15 pt-6 text-[.7rem] uppercase tracking-[.2em] text-white/50">© <span data-year>2026</span> Gregory Jewels · P.IVA 00000000000</p>
+</footer>
+
+<nav class="switcher flex gap-px bg-ink/90 text-[.62rem] uppercase tracking-[.2em] text-white" aria-label="Cambia concept">
+  <a class="px-4 py-3 hover:bg-white/10" href="concept-1.html">01 Maison</a>
+  <a class="px-4 py-3 hover:bg-white/10" href="concept-2.html">02 Atelier</a>
+  <a class="px-4 py-3 bg-gold text-ink" href="concept-3.html" aria-current="page">03 Moderno</a>
+</nav>
+
+<script src="js/site.js" defer></script>
+<script>
+  (function () {
+    var film = document.getElementById('film');
+    if (film && matchMedia('(prefers-reduced-motion: reduce)').matches) { film.removeAttribute('autoplay'); film.pause(); }
+
+    /* collection: hover/focus swaps the picture; click-free so it also works by keyboard */
+    var slides = document.querySelectorAll('[data-slide]');
+    var links = document.querySelectorAll('#pieces a');
+    function show(name) {
+      slides.forEach(function (s) { s.style.opacity = s.dataset.slide === name ? '1' : '0'; });
+      links.forEach(function (l) { l.classList.toggle('text-gold-deep', l.dataset.target === name); });
+    }
+    links.forEach(function (l) {
+      ['pointerenter', 'focus'].forEach(function (ev) { l.addEventListener(ev, function () { show(l.dataset.target); }); });
+    });
+    show('collane');
+  })();
+</script>
+</body>
+</html>

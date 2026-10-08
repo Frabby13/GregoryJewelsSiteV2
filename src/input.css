@@ -1,0 +1,131 @@
+@import "tailwindcss";
+@source "../*.html";
+
+/* ---------- Gregory Jewels — brand fonts (from the existing project) ---------- */
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/cormorant-400.ttf) format('truetype')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/cormorant-500.ttf) format('truetype')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-display:swap;src:url(../fonts/cormorant-500-italic.ttf) format('truetype')}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:300;font-display:swap;src:url(../fonts/montserrat-300.ttf) format('truetype')}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/montserrat-400.ttf) format('truetype')}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/montserrat-500.ttf) format('truetype')}
+
+/* ---------- Brand tokens ---------- */
+@theme {
+  --color-ink: #0f0f0f;
+  --color-ink-soft: #1a1917;
+  --color-paper: #ffffff;
+  --color-bone: #faf8f4;          /* warm white, derived from #FAFAFA */
+  --color-stone: #efe9db;         /* the warm tone already used behind the hero video */
+  --color-gold: #d4af37;
+  --color-gold-metal: #c5a059;
+  --color-gold-deep: #8f6f2c;     /* gold for small text on light grounds (AA) */
+  --color-line: #e5e5e5;
+  --color-mute: #5c5a55;
+
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --ease-lux: cubic-bezier(.22,.61,.36,1);
+  --ease-cine: cubic-bezier(.65,0,.15,1);
+}
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: .01em;
+    color: var(--color-ink);
+    background: var(--color-paper);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+  img, video { display: block; max-width: 100%; }
+  :focus-visible { outline: 2px solid var(--color-gold); outline-offset: 4px; }
+  ::selection { background: var(--color-gold); color: var(--color-ink); }
+}
+
+@layer components {
+  /* quiet link: underline draws in from the left */
+  .u-link { position: relative; display: inline-block; padding-block: .35em; }
+  .u-link::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+    background: currentColor; transform-origin: right; transform: scaleX(0);
+    transition: transform .6s var(--ease-lux);
+  }
+  .u-link:hover::after, .u-link:focus-visible::after { transform-origin: left; transform: scaleX(1); }
+  .u-link--rest::after { transform: scaleX(1); transform-origin: left; }
+  .u-link--rest:hover::after { transform-origin: right; transform: scaleX(0); }
+
+  .eyebrow { font-size: .72rem; font-weight: 500; letter-spacing: .28em; text-transform: uppercase; }
+
+  /* image frame: holds the crop, lets the image scale slowly on hover */
+  .frame { overflow: hidden; position: relative; background: var(--color-stone); }
+  .frame > img, .frame > video { width: 100%; height: 100%; object-fit: cover; transition: transform 1.6s var(--ease-lux); }
+  .frame:hover > img { transform: scale(1.035); }
+}
+
+/* the opening curtain exists only when motion is allowed and JS is running */
+.hero-curtain { display: none; }
+
+/* ---------- Motion (only when JS is running and the visitor allows motion) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  html.js [data-reveal] {
+    opacity: 0; transform: translate3d(0, 28px, 0);
+    transition: opacity 1.2s var(--ease-lux) var(--d, 0s), transform 1.4s var(--ease-lux) var(--d, 0s);
+  }
+  html.js [data-reveal].is-in { opacity: 1; transform: none; }
+
+  /* curtain: image is uncovered from the bottom */
+  html.js [data-mask] { clip-path: inset(0 0 100% 0); transition: clip-path 1.6s var(--ease-cine) var(--d, 0s); }
+  html.js [data-mask].is-in { clip-path: inset(0 0 0 0); }
+  html.js [data-mask] > img { transform: scale(1.18); transition: transform 2.4s var(--ease-lux) var(--d, 0s); }
+  html.js [data-mask].is-in > img { transform: scale(1); }
+  html.js [data-mask-x] { clip-path: inset(0 100% 0 0); transition: clip-path 1.6s var(--ease-cine) var(--d, 0s); }
+  html.js [data-mask-x].is-in { clip-path: inset(0 0 0 0); }
+
+  /* headline lines rise out of a clipped slot */
+  html.js .line { display: block; overflow: hidden; padding-bottom: .12em; margin-bottom: -.12em; }
+  html.js .line > span { display: block; transform: translate3d(0, 108%, 0); transition: transform 1.5s var(--ease-cine) calc(var(--d, 0s) + var(--i, 0) * .14s); }
+  html.js .is-in .line > span, html.js .line.is-in > span, html.js.ready .hero-lines .line > span { transform: none; }
+
+  /* hero opening: slow scale-down of the picture while the curtain lifts */
+  html.js .hero-pic { transform: scale(1.14); transition: transform 3.6s var(--ease-lux); }
+  html.js.ready .hero-pic { transform: scale(1); }
+  html.js .hero-fade { opacity: 0; transition: opacity 1.6s var(--ease-lux) var(--d, 1.6s); }
+  html.js.ready .hero-fade { opacity: 1; }
+  html.js .hero-curtain { display: block; transition: transform 1.9s var(--ease-cine) .15s; }
+  html.js.ready .hero-curtain { transform: translate3d(0, -101%, 0); }
+  /* concept 03: the film opens from an inset frame to full bleed */
+  html.js .hero-frame { clip-path: inset(11% 6% 11% 6%); transition: clip-path 2.6s var(--ease-cine) .3s; }
+  html.js.ready .hero-frame { clip-path: inset(0 0 0 0); }
+  html.js .draw { transform: scaleX(0); transform-origin: left; transition: transform 1.8s var(--ease-cine) var(--d, 0s); }
+  html.js .is-in .draw, html.js .draw.is-in { transform: scaleX(1); }
+  html.js .hero-rule { transform: scaleX(0); transform-origin: left; transition: transform 2.2s var(--ease-cine) var(--d, 1.4s); }
+  html.js.ready .hero-rule { transform: scaleX(1); }
+}
+
+/* ---------- Concept switcher (review aid, not part of the brand design) ---------- */
+.switcher { position: fixed; z-index: 90; left: 50%; bottom: 10px; transform: translateX(-50%); white-space: nowrap; }
+.switcher a { padding: .55rem .7rem; }
+@media (min-width: 640px) { .switcher { bottom: 14px; } .switcher a { padding: .75rem 1rem; } }
+
+/* custom cursor (concept 02), pointer devices only */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .cursor {
+    position: fixed; z-index: 120; left: 0; top: 0; pointer-events: none;
+    width: 84px; height: 84px; margin: -42px 0 0 -42px; border-radius: 9999px;
+    display: grid; place-items: center; text-align: center;
+    background: var(--color-gold); color: var(--color-ink);
+    font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 500;
+    opacity: 0; transform: translate3d(var(--x, -100px), var(--y, -100px), 0) scale(.4);
+    transition: opacity .4s var(--ease-lux), scale .5s var(--ease-lux);
+  }
+  .cursor.is-on { opacity: 1; }
+}
+.cursor { display: none; }
+@media (hover: hover) and (pointer: fine) { .cursor { display: grid; } }
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
