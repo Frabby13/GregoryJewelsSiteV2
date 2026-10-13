@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @source "../*.html";
+@source "../concept-1/**/*.html";
+@source "../concept-2/**/*.html";
+@source "../concept-3/**/*.html";
 
 /* ---------- Gregory Jewels — brand fonts (from the existing project) ---------- */
 @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/cormorant-400.ttf) format('truetype')}

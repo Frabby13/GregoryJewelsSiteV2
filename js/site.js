@@ -53,8 +53,9 @@
   var header = document.querySelector('[data-header]');
   if (header) {
     var last = -1;
+    var solid = header.hasAttribute('data-solid'); /* internal pages that open on a light ground */
     var onScroll = function () {
-      var s = window.scrollY > 40;
+      var s = solid || window.scrollY > 40;
       if (s !== last) { header.classList.toggle('is-scrolled', s); last = s; }
     };
     onScroll();

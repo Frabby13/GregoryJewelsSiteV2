@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atelier — Gregory Jewels</title>
+<meta name="description" content="Fusione, saldatura, limatura, incastonatura: il lavoro di Gregory Jewels, da vicino.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preload" href="../fonts/cormorant-400.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="../css/tailwind.css">
+</head>
+<body class="bg-paper">
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:bg-ink focus:text-white focus:px-4 focus:py-2">Vai al contenuto</a>
+
+<header data-header data-solid class="group fixed inset-x-0 top-0 z-[70] text-white transition-[background-color,color] duration-700 ease-lux [&.is-scrolled]:bg-paper [&.is-scrolled]:text-ink [&.is-scrolled]:shadow-[0_1px_0_var(--color-line)] is-scrolled">
+  <div class="hero-fade mx-auto grid max-w-[1872px] grid-cols-[auto_1fr_auto] items-center gap-8 px-5 py-5 sm:px-10 lg:px-14" style="--d:.3s">
+    <a href="../concept-3.html" aria-label="Gregory Jewels — homepage" class="flex items-center gap-3">
+      <img class="h-9 w-auto group-[.is-scrolled]:hidden" src="../img/logo-mark-light.png" alt="" width="30" height="44">
+      <img class="hidden h-9 w-auto group-[.is-scrolled]:block" src="../img/logo-mark.png" alt="" width="30" height="44">
+      <span class="whitespace-nowrap font-display text-[.98rem] tracking-[.2em] sm:text-xl sm:tracking-[.24em]">GREGORY JEWELS</span>
+    </a>
+    <nav aria-label="Principale" class="hidden justify-center gap-10 text-[.7rem] uppercase tracking-[.2em] lg:flex">
+      <a class="u-link" href="collezioni.html">Collezioni</a>
+      <a class="u-link" href="maison.html">Maison</a>
+      <a class="u-link u-link--rest" href="artigianalita.html" aria-current="page">Atelier</a>
+      <a class="u-link" href="journal.html">Journal</a>
+    </nav>
+    <div class="col-start-3 flex items-center gap-6 text-[.7rem] uppercase tracking-[.2em]">
+      <a href="contatti.html" class="hidden border border-current px-5 py-3 transition-colors duration-500 hover:border-gold hover:bg-gold hover:text-ink sm:inline-block">Prenota</a>
+      <button data-menu-toggle type="button" aria-expanded="false" aria-controls="menu" aria-label="Apri il menu" class="-mr-2 inline-flex min-h-11 items-center px-2 uppercase tracking-[.2em] lg:hidden">Menu</button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu class="invisible fixed inset-0 z-[60] flex flex-col bg-ink px-6 pb-10 pt-24 text-white opacity-0 transition-[opacity,visibility] duration-700 ease-lux [&.is-open]:visible [&.is-open]:opacity-100 lg:hidden">
+  <nav aria-label="Menu" class="flex flex-1 flex-col justify-center divide-y divide-white/15 font-display text-[clamp(2rem,9vw,3rem)]">
+    <a class="py-4" href="collezioni.html">Collezioni</a><a class="py-4" href="maison.html">Maison</a><a class="py-4" href="artigianalita.html">Atelier</a><a class="py-4" href="journal.html">Journal</a><a class="py-4 text-gold" href="contatti.html">Prenota un appuntamento</a>
+  </nav>
+</div>
+
+<main id="main">
+<section class="mx-auto max-w-[1872px] px-5 sm:px-10 lg:px-14 pb-20 pt-40 md:pb-32 md:pt-52">
+  <div class="grid gap-10 lg:grid-cols-12 lg:gap-8">
+    <p class="hero-fade text-[.7rem] uppercase tracking-[.2em] text-gold-deep lg:col-span-2" style="--d:.3s">Atelier</p>
+    <h1 class="hero-lines font-display text-[clamp(2.6rem,6.4vw,6.8rem)] font-normal leading-[1.02] tracking-[-.015em] lg:col-span-9 lg:col-start-4">
+      <span class="line"><span style="--i:0;--d:.3s">La fiamma,</span></span>
+      <span class="line"><span style="--i:1;--d:.3s" class="italic">poi la pazienza.</span></span>
+    </h1>
+  </div>
+  <p class="hero-fade mt-10 max-w-[46ch] text-[.95rem] leading-[1.9] text-mute lg:ml-[calc(25%+.5rem)]" style="--d:.8s">Fusione, saldatura, limatura, incastonatura. Pochi gesti, ripetuti finché il pezzo smette di sembrare lavorato e comincia a sembrare inevitabile.</p>
+</section>
+
+<section class="mx-auto max-w-[1872px] px-5 sm:px-10 lg:px-14 pb-28 md:pb-44" aria-label="I quattro gesti">
+  <ol class="grid gap-12 md:grid-cols-4 md:gap-8">
+    <li data-reveal><div class="draw mb-6 h-px bg-ink"></div><h3 class="font-display text-3xl">Il bozzetto</h3><p class="mt-3 text-[.9rem] leading-[1.8] text-mute">Si parte ascoltando. Poi matita, colore, proporzioni, finché il disegno regge da solo.</p></li>
+    <li data-reveal style="--d:0.12s"><div class="draw mb-6 h-px bg-ink"></div><h3 class="font-display text-3xl">La fusione</h3><p class="mt-3 text-[.9rem] leading-[1.8] text-mute">Il metallo prende forma sul banco, alla fiamma, saldatura dopo saldatura.</p></li>
+    <li data-reveal style="--d:0.24s"><div class="draw mb-6 h-px bg-ink"></div><h3 class="font-display text-3xl">La pietra</h3><p class="mt-3 text-[.9rem] leading-[1.8] text-mute">Scelta a occhio, con la lente. Poi l'incastonatura, il gesto più piccolo e il meno perdonabile.</p></li>
+    <li data-reveal style="--d:0.36s"><div class="draw mb-6 h-px bg-ink"></div><h3 class="font-display text-3xl">La consegna</h3><p class="mt-3 text-[.9rem] leading-[1.8] text-mute">Il pezzo viene provato, aggiustato e consegnato a mano.</p></li>
+  </ol>
+  <div class="mt-20 grid gap-6 md:mt-28 md:grid-cols-12 md:gap-8">
+    <div class="frame aspect-[4/3] md:col-span-7" data-mask-x><img src="../img/lab-fusione-fiamma.jpg" alt="Una fiamma azzurra scalda un anello d'oro su un blocco di lavoro" width="900" height="675" fetchpriority="high" decoding="async"></div>
+    <div class="frame aspect-[4/3] md:col-span-5 md:mt-24" data-mask-x style="--d:.2s"><img src="../img/lab-saldatura-flusso.jpg" alt="Un orafo salda un anello alla fiamma" width="900" height="675" loading="lazy" decoding="async"></div>
+  </div>
+</section>
+
+<section class="bg-ink py-28 text-white md:py-44" aria-labelledby="det">
+  <div class="mx-auto max-w-[1872px] px-5 sm:px-10 lg:px-14">
+    <div class="mb-14 flex items-end justify-between md:mb-20">
+      <h2 id="det" class="font-display text-[clamp(2.2rem,4.6vw,4.6rem)] leading-none" data-reveal>Dettagli</h2>
+      <p class="hidden text-[.7rem] uppercase tracking-[.2em] text-white/60 md:block" data-reveal>Da vicino</p>
+    </div>
+    <div class="grid gap-x-6 gap-y-12 sm:grid-cols-3">
+      <figure data-reveal>
+        <div class="frame aspect-[3/4] bg-ink-soft"><img src="../img/gallery-anello-solitario.jpg" alt="Dettaglio ravvicinato di un diamante con il suo contorno di brillanti" width="900" height="600" loading="lazy" decoding="async" class="origin-[48%_44%] scale-[2.1]"></div>
+        <figcaption class="mt-4 flex justify-between text-[.7rem] uppercase tracking-[.2em]"><span>Pavé</span><span class="text-white/55">Brillanti</span></figcaption>
+      </figure>
+      <figure data-reveal style="--d:0.12s">
+        <div class="frame aspect-[3/4] bg-ink-soft"><img src="../img/gallery-collana-pietra-colore.jpg" alt="Dettaglio di una pietra blu sfaccettata, incastonata in oro" width="900" height="1350" loading="lazy" decoding="async" class="origin-[47%_26%] scale-[2.6]"></div>
+        <figcaption class="mt-4 flex justify-between text-[.7rem] uppercase tracking-[.2em]"><span>Taglio</span><span class="text-white/55">Pietra di colore</span></figcaption>
+      </figure>
+      <figure data-reveal style="--d:0.24s">
+        <div class="frame aspect-[3/4] bg-ink-soft"><img src="../img/filosofia-orecchini-oro.jpg" alt="Dettaglio di un orecchino a cerchio in oro intrecciato" width="1200" height="1800" loading="lazy" decoding="async" class="origin-[52%_73%] scale-[2.4]"></div>
+        <figcaption class="mt-4 flex justify-between text-[.7rem] uppercase tracking-[.2em]"><span>Intreccio</span><span class="text-white/55">Oro</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="mx-auto max-w-[1872px] px-5 sm:px-10 lg:px-14 grid items-center gap-14 py-28 md:py-44 lg:grid-cols-12 lg:gap-8" aria-label="Il gesto">
+  <div class="lg:col-span-6">
+    <div class="frame aspect-[3/2]" data-mask-x><img src="../img/lab-incastonatura.jpg" alt="Incastonatura di una pietra al banco da orafo" width="900" height="582" loading="lazy" decoding="async"></div>
+  </div>
+  <div class="lg:col-span-5 lg:col-start-8">
+    <p class="font-display text-[clamp(2.2rem,4vw,4.2rem)] italic leading-[1.1]" data-reveal>Il tempo che serve, non quello che avanza.</p>
+  </div>
+</section>
+
+<section class="relative h-[72svh] min-h-[420px] bg-ink" aria-label="Il film">
+  <video id="film" class="h-full w-full object-cover" src="../video/video_gioiello_gregory.mp4" poster="../img/hero-contatti.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+  <div class="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent"></div>
+</section>
+
+<section class="border-t border-line" aria-label="Collezioni">
+  <a href="collezioni.html" class="group/cta relative block overflow-hidden px-5 py-20 sm:px-10 md:py-36 lg:px-14">
+    <span class="absolute inset-0 origin-bottom scale-y-0 bg-ink transition-transform duration-700 ease-cine group-hover/cta:scale-y-100 group-focus-visible/cta:scale-y-100" aria-hidden="true"></span>
+    <span class="relative mx-auto flex max-w-[1760px] flex-col gap-6 transition-colors duration-700 group-hover/cta:text-white group-focus-visible/cta:text-white md:flex-row md:items-end md:justify-between">
+      <span>
+        <span class="block text-[.7rem] uppercase tracking-[.2em] text-gold-deep">Collezioni</span>
+        <span class="mt-5 block font-display text-[clamp(2.6rem,8vw,8.5rem)] leading-[.98] tracking-[-.015em]">Guarda i pezzi<br><em>finiti</em></span>
+      </span>
+      <span class="font-display text-5xl transition-transform duration-700 ease-lux group-hover/cta:translate-x-3 md:text-7xl" aria-hidden="true">→</span>
+    </span>
+  </a>
+</section>
+</main>
+
+<footer class="bg-ink px-5 pb-24 pt-16 text-white sm:px-10 lg:px-14">
+  <div class="mx-auto grid max-w-[1760px] gap-12 md:grid-cols-12">
+    <div class="md:col-span-5">
+      <a href="../concept-3.html" aria-label="Gregory Jewels — homepage"><img class="h-12 w-auto" src="../img/logo-mark-light.png" alt="Gregory Jewels" width="30" height="44" loading="lazy"></a>
+      <p class="mt-6 max-w-[30ch] font-display text-2xl italic text-white/80">Creazioni uniche che custodiscono emozioni senza tempo.</p>
+    </div>
+    <nav aria-label="Footer" class="grid grid-cols-2 gap-8 text-[.75rem] uppercase tracking-[.18em] text-white/70 md:col-span-6 md:col-start-7">
+      <ul class="space-y-3"><li><a class="u-link" href="collezioni.html">Collezioni</a></li><li><a class="u-link" href="maison.html">Maison</a></li><li><a class="u-link" href="artigianalita.html">Atelier</a></li><li><a class="u-link" href="journal.html">Journal</a></li></ul>
+      <ul class="space-y-3"><li><a class="u-link" href="contatti.html">Contatti</a></li><li><a class="u-link" href="https://www.instagram.com/gregoryjewels/" target="_blank" rel="noopener">Instagram</a></li><li><a class="u-link" href="mailto:info@gregoryjewels.com">Email</a></li></ul>
+    </nav>
+  </div>
+  <p class="mx-auto mt-16 max-w-[1760px] border-t border-white/15 pt-6 text-[.7rem] uppercase tracking-[.2em] text-white/50">© <span data-year>2026</span> Gregory Jewels · P.IVA 00000000000</p>
+</footer>
+
+<nav class="switcher flex gap-px bg-ink/90 text-[.62rem] uppercase tracking-[.2em] text-white" aria-label="Cambia concept">
+  <a class="px-4 py-3 hover:bg-white/10" href="../concept-1.html">Maison</a>
+  <a class="px-4 py-3 hover:bg-white/10" href="../concept-2.html">Atelier</a>
+  <a class="px-4 py-3 bg-gold text-ink" href="../concept-3.html" aria-current="true">Moderno</a>
+</nav>
+
+<script src="../js/site.js" defer></script>
+<script>
+  (function () {
+    var film = document.getElementById('film');
+    if (film && matchMedia('(prefers-reduced-motion: reduce)').matches) { film.removeAttribute('autoplay'); film.pause(); }
+  })();
+</script>
+</body>
+</html>
