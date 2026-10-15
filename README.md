@@ -50,4 +50,3 @@ Da sapere:
 - `build/shop.mjs` — form di aggiunta, corpo del carrello e token di stile condivisi; ogni concept li veste a modo suo.
 - `js/shop.js` — carrello in `localStorage`, contatore nell'header, filtro. Nessun backend: «Invia la richiesta d'ordine» apre il programma di posta con l'elenco dei pezzi; non c'è pagamento né spedizione calcolata.
 - Una sola foto per pezzo: la seconda vista di ogni scheda è un ritaglio.
-- Le homepage `concept-N.html` non hanno ancora il link «Negozio» né il contatore carrello.
