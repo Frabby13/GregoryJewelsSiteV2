@@ -1,6 +1,7 @@
 // Concept 02 — Art / Portfolio. Continues concept-2.html: stone ground, oversized Cormorant,
 // overlapping crops, a blend-mode header, a horizontal rail, ruled lists and a gold cursor label.
-import { COLLECTIONS, MAISON, CRAFT, ARTICLES, SITE, CONTACT, col, art, relatedCollections } from './data.mjs';
+import { COLLECTIONS, MAISON, CRAFT, ARTICLES, SITE, CONTACT, PRODUCTS, col, art, relatedCollections, relatedProducts } from './data.mjs';
+import { money, addForm, cartBody, tokens } from './shop.mjs';
 import { pic, head, skip, switcher, scripts, contactScript, contactForm, links } from './lib.mjs';
 
 const N = 2;
@@ -29,15 +30,20 @@ ${skip}
       ${a('collezioni', 'Opere')}
       ${a('atelier', 'Processo')}
       ${a('maison', 'Studio')}
+      ${a('negozio', 'Negozio')}
       ${a('journal', 'Journal')}
       ${a('contatti', 'Contatti')}
+      ${a('carrello', 'Carrello (<span data-cart-count>0</span>)')}
     </nav>
+    <div class="flex items-center gap-4 md:hidden">
+    <a href="${L.carrello}" class="text-[.7rem] uppercase tracking-[.22em]"${active === 'carrello' ? ' aria-current="page"' : ''}>Carrello (<span data-cart-count>0</span>)</a>
     <button data-menu-toggle type="button" aria-expanded="false" aria-controls="menu" aria-label="Apri il menu" class="-mr-2 inline-flex min-h-11 items-center px-2 text-[.7rem] uppercase tracking-[.22em] md:hidden">Indice</button>
+    </div>
   </div>
 </header>
 <div id="menu" data-menu class="invisible fixed inset-0 z-[60] flex flex-col justify-end bg-ink px-6 pb-12 pt-24 text-white opacity-0 transition-[opacity,visibility] duration-700 ease-lux [&.is-open]:visible [&.is-open]:opacity-100 md:hidden">
   <nav aria-label="Menu" class="flex flex-col gap-1 font-display text-[clamp(3rem,15vw,5rem)] italic leading-[1.05]">
-    <a href="${L.collezioni}">Opere</a><a href="${L.atelier}">Processo</a><a href="${L.maison}">Studio</a><a href="${L.journal}">Journal</a><a href="${L.contatti}">Contatti</a>
+    <a href="${L.collezioni}">Opere</a><a href="${L.atelier}">Processo</a><a href="${L.maison}">Studio</a><a href="${L.negozio}">Negozio</a><a href="${L.journal}">Journal</a><a href="${L.contatti}">Contatti</a>
   </nav>
 </div>
 
@@ -49,7 +55,7 @@ ${main}
   <div class="mx-auto flex max-w-[1760px] flex-col gap-6 border-t border-white/15 pt-8 ${SMALL} text-white/65 md:flex-row md:justify-between">
     <span>© <span data-year>2026</span> Gregory Jewels · P.IVA 00000000000</span>
     <nav aria-label="Footer" class="flex flex-wrap gap-x-8 gap-y-3">
-      <a class="u-link" href="${L.collezioni}">Opere</a><a class="u-link" href="${L.atelier}">Processo</a><a class="u-link" href="${L.maison}">Studio</a><a class="u-link" href="${L.journal}">Journal</a><a class="u-link" href="${L.contatti}">Contatti</a>
+      <a class="u-link" href="${L.collezioni}">Opere</a><a class="u-link" href="${L.atelier}">Processo</a><a class="u-link" href="${L.maison}">Studio</a><a class="u-link" href="${L.negozio}">Negozio</a><a class="u-link" href="${L.journal}">Journal</a><a class="u-link" href="${L.contatti}">Contatti</a>
       <a class="u-link" href="${SITE.instagram}" target="_blank" rel="noopener">Instagram</a>
     </nav>
   </div>
@@ -449,4 +455,95 @@ export function contatti() {
 
 ${closing(L, { lines: ['Pezzi con', 'intenzione.'], link: L.collezioni, label: 'Torna alle opere', text: 'Il modulo prepara un’email nel tuo programma di posta: nulla viene inviato finché non lo fai tu.' })}`;
   return shell({ title: 'Contatti', desc: 'Scrivi a Gregory Jewels per una commissione, un restauro o per vedere i pezzi su appuntamento.', depth: 1, active: 'contatti', main, extra: contactScript(rt) });
+}
+
+/* ---------------------------------------------------------------- 08 negozio (Shop), 09 prodotto, 10 carrello */
+const S = tokens({
+  small: SMALL, body: BODY, rule: 'border-ink/20',
+  label: `${SMALL} text-gold-deep`,
+  button: `inline-flex min-h-12 items-center border border-ink px-8 py-4 ${SMALL} transition-colors duration-500 hover:bg-ink hover:text-white`,
+  nameCls: 'font-display text-3xl italic leading-tight md:text-4xl', lineCls: 'font-display text-2xl italic md:text-3xl', titleCls: 'font-display text-4xl italic md:text-5xl',
+});
+
+export function negozio() {
+  const L = links(N, 1); const rt = L.root;
+  const cols = [...new Set(PRODUCTS.map((p) => p.col))].map((s) => col(s));
+  const chip = `min-h-11 border-b border-transparent px-1 ${SMALL} transition-colors duration-500 hover:border-ink aria-pressed:border-ink`;
+  const rows = PRODUCTS.map((p, i) => `<li data-col="${p.col}" class="border-t border-ink/20 last:border-b">
+      <a href="${L.prod(p.slug)}" class="group/c grid items-center gap-x-8 gap-y-4 py-6 md:grid-cols-12 md:py-8" data-cursor="Apri">
+        <div class="frame aspect-[4/5] w-28 md:col-span-2 md:w-full" data-mask>${pic(rt, p.views[0].img, { alt: '', cls: p.views[0].cls })}</div>
+        <h2 class="font-display text-[clamp(2.2rem,5.6vw,6rem)] leading-[.95] tracking-[-.02em] transition-transform duration-700 ease-lux md:col-span-6 md:group-hover/c:translate-x-3 ${i % 2 ? 'italic' : ''}" data-reveal>${p.name}</h2>
+        <p class="${SMALL} md:col-span-2" data-reveal>${col(p.col).name}<br><span class="text-mute">${p.short}</span></p>
+        <p class="font-display text-3xl md:col-span-2 md:text-right" data-reveal>${money(p.price)}</p>
+      </a>
+    </li>`).join('\n    ');
+  const main = `<section class="relative px-5 pb-16 pt-28 sm:px-10 md:pb-24 lg:px-14" aria-label="Apertura">
+  <h1 class="hero-lines ${BIG} text-ink"><span class="line"><span class="block" style="--i:0;--d:.3s">Negozio</span></span></h1>
+  <div class="mt-10 flex flex-col justify-between gap-8 md:mt-16 md:flex-row md:items-end">
+    <p class="hero-fade max-w-[34ch] text-[.95rem] leading-[1.9]" style="--d:.9s">Sei pezzi dalle collezioni, da richiedere online. Per tutto il resto, c'è il su misura.</p>
+    <p class="hero-fade ${SMALL}" style="--d:1s" role="status" data-filter-status>${PRODUCTS.length} pezzi</p>
+  </div>
+</section>
+
+<section class="${PAD} pb-32 md:pb-52" aria-label="I pezzi">
+  <div class="mx-auto max-w-[1760px]">
+    <div data-filter-bar hidden class="mb-8 flex flex-wrap gap-x-6 gap-y-2" role="group" aria-label="Filtra per collezione">
+      <button type="button" data-filter="all" aria-pressed="true" class="${chip}">Tutti</button>
+      ${cols.map((c) => `<button type="button" data-filter="${c.slug}" aria-pressed="false" class="${chip}">${c.name}</button>`).join('\n      ')}
+    </div>
+    <ul>
+    ${rows}
+    </ul>
+  </div>
+</section>
+
+${closing(L, { lines: ['Pezzi con', 'intenzione.'], link: L.contatti, label: 'Chiedi un pezzo su misura' })}`;
+  return shell({ title: 'Negozio', desc: 'Il negozio Gregory Jewels: collane, anelli, bracciali e orecchini da richiedere online.', depth: 1, active: 'negozio', main });
+}
+
+export function prodotto(p) {
+  const L = links(N, 2); const rt = L.root;
+  const c = col(p.col);
+  const rel = relatedProducts(p.slug);
+  const main = `<section class="${PAD} pb-10 pt-28" aria-label="${p.name}">
+  <p class="${SMALL} text-mute"><a class="u-link" href="${L.negozio}">Negozio</a> / <a class="u-link" href="${L.col(c.slug)}">${c.name}</a></p>
+  <h1 class="hero-lines mt-8 font-display text-[clamp(3.4rem,13vw,15rem)] font-normal leading-[.86] tracking-[-.03em]"><span class="line"><span class="block" style="--i:0;--d:.3s">${p.name}</span></span></h1>
+</section>
+
+<section class="${PAD} pb-28 md:pb-44">
+  <div class="mx-auto grid max-w-[1760px] gap-12 lg:grid-cols-12 lg:gap-8">
+    <div class="frame aspect-[4/5] lg:col-span-6">${pic(rt, p.views[0].img, { eager: true, alt: p.views[0].alt || p.name, cls: p.views[0].cls })}</div>
+    <div class="lg:sticky lg:top-24 lg:col-span-5 lg:col-start-8 lg:self-start">
+      <p class="font-display text-5xl italic">${money(p.price)}</p>
+      <p class="mt-8 max-w-[44ch] ${BODY}">${p.desc}</p>
+      <div class="mt-10">${addForm(p, S, L)}</div>
+      <dl class="mt-12 border-t border-ink/20">
+        ${p.details.map(([k, v]) => `<div class="flex justify-between gap-6 border-b border-ink/20 py-4"><dt class="${SMALL} text-gold-deep">${k}</dt><dd class="text-right font-display text-xl italic">${v}</dd></div>`).join('\n        ')}
+      </dl>
+      <p class="${S.note} mt-5">Dopo la richiesta ti scriviamo di persona per confermare disponibilità, tempi e spedizione.</p>
+    </div>
+    <div class="frame aspect-[3/2] lg:col-span-5 lg:col-start-2 lg:-mt-24" data-mask>${pic(rt, p.views[1].img, { alt: p.views[1].alt, cls: p.views[1].cls })}</div>
+  </div>
+</section>
+
+${rail(rt, L, rel.map((r) => `<a href="${L.prod(r.slug)}" class="group/c block w-[68vw] shrink-0 snap-start sm:w-[34vw] lg:w-[24vw]" data-cursor="Apri">
+      <div class="frame aspect-[4/5]">${pic(rt, r.views[0].img, { alt: '', cls: r.views[0].cls })}</div>
+      <p class="mt-4 flex items-baseline justify-between gap-4"><span class="font-display text-2xl italic">${r.name}</span><span class="font-display text-xl">${money(r.price)}</span></p>
+    </a>`).join('\n    '), { title: 'Altri pezzi', label: 'Altri pezzi del negozio' })}`;
+  return shell({ title: p.name, desc: `${p.name} — ${p.short}. ${p.desc}`, depth: 2, active: 'negozio', main, extra: `<script src="${rt}js/rail.js" defer></script>
+` });
+}
+
+export function carrello() {
+  const L = links(N, 1);
+  const main = `<section class="relative px-5 pb-16 pt-28 sm:px-10 md:pb-24 lg:px-14" aria-label="Apertura">
+  <h1 class="hero-lines ${BIG} text-ink"><span class="line"><span class="block" style="--i:0;--d:.3s">Carrello</span></span></h1>
+</section>
+
+<section class="${PAD} pb-32 md:pb-52" aria-label="Il carrello">
+  <div class="mx-auto max-w-[1760px]">
+${cartBody(L, S)}
+  </div>
+</section>`;
+  return shell({ title: 'Carrello', desc: 'Il tuo carrello Gregory Jewels.', depth: 1, active: 'carrello', main });
 }

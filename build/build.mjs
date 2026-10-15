@@ -3,7 +3,7 @@
 import { mkdirSync, writeFileSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { COLLECTIONS, ARTICLES } from './data.mjs';
+import { COLLECTIONS, ARTICLES, PRODUCTS } from './data.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const concepts = [1, 2, 3];
@@ -26,5 +26,8 @@ for (const n of concepts) {
   out('journal.html', c.journal());
   for (const a of ARTICLES) out(`journal/${a.slug}.html`, c.articolo(a));
   out('contatti.html', c.contatti());
+  out('negozio.html', c.negozio());
+  for (const p of PRODUCTS) out(`negozio/${p.slug}.html`, c.prodotto(p));
+  out('carrello.html', c.carrello());
 }
 console.log(`${count} pages written`);

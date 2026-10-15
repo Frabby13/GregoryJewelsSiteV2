@@ -218,3 +218,79 @@ export const CONTACT = {
   lead: 'Per una commissione, un restauro o semplicemente per vedere i pezzi: scrivici, rispondiamo di persona.',
   topics: ['Una commissione su misura', 'Vedere i pezzi, su appuntamento', 'Un restauro', 'Altro'],
 };
+
+/* Shop: SAMPLE catalogue. Names and materials come from the collection texts above; prices (whole euros)
+   are placeholders to be replaced. Each piece has one photograph, so the extra views are close-up crops. */
+export const PRODUCTS = [
+  {
+    slug: 'collana-pietra-blu', name: 'Collana con pietra blu', col: 'collane', price: 1480,
+    short: 'Oro, pietra blu sfaccettata',
+    desc: 'Una catena sottile in oro con una pietra blu dal taglio sfaccettato: un solo punto di colore, lasciato libero sulla pelle.',
+    views: [
+      { img: 'collana', cls: 'object-[50%_30%]' },
+      { img: 'collana', cls: 'origin-[47%_26%] scale-[2.6]', alt: 'Dettaglio di una pietra blu sfaccettata, incastonata in oro' },
+    ],
+    details: [['Metallo', 'Oro'], ['Pietra', 'Blu, taglio sfaccettato'], ['Lavorazione', 'A mano']],
+    opt: { label: 'Lunghezza', error: 'Scegli la lunghezza.', values: ['40 cm', '45 cm', '50 cm'] },
+  },
+  {
+    slug: 'collana-mezzaluna', name: 'Collana mezzaluna', col: 'collane', price: 1290,
+    short: 'Oro, ciondolo con piccole pietre',
+    desc: 'Un ciondolo a mezzaluna segnato da piccole pietre in fila, su una catena d\'oro che lavora sulla distanza tra un punto e l\'altro.',
+    views: [
+      { img: 'collana', cls: 'object-[50%_80%]' },
+      { img: 'collana', cls: 'origin-[45%_83%] scale-[2.2]', alt: 'Dettaglio del ciondolo a mezzaluna con le piccole pietre incastonate' },
+    ],
+    details: [['Metallo', 'Oro'], ['Ciondolo', 'Mezzaluna con piccole pietre incastonate'], ['Lavorazione', 'A mano']],
+    opt: { label: 'Lunghezza', error: 'Scegli la lunghezza.', values: ['40 cm', '45 cm', '50 cm'] },
+  },
+  {
+    slug: 'anello-solitario', name: 'Anello solitario', col: 'anelli', price: 3200,
+    short: 'Oro bianco e rosa, diamante',
+    desc: 'Un diamante al centro, un contorno di brillanti. L\'oro bianco e rosa tiene la pietra in primo piano.',
+    views: [
+      { img: 'anello', cls: 'object-[55%_50%]' },
+      { img: 'anello', cls: 'origin-[48%_44%] scale-[2.1]', alt: 'Dettaglio ravvicinato di un diamante con il suo contorno di brillanti' },
+    ],
+    details: [['Metallo', 'Oro bianco e rosa'], ['Pietra', 'Diamante al centro'], ['Contorno', 'Brillanti, pavé']],
+    opt: { label: 'Misura', error: 'Scegli la misura.', values: ['50', '52', '54', '56', '58'] },
+  },
+  {
+    slug: 'bracciale-goccia', name: 'Bracciale a goccia', col: 'bracciali', price: 2650,
+    short: 'Oro bianco e giallo, rigido',
+    desc: 'Un bracciale rigido con un solo motivo: la goccia, ripetuta a catena intorno al polso e punteggiata di brillanti.',
+    views: [
+      { img: 'bracciale', cls: 'object-center' },
+      { img: 'bracciale', cls: 'origin-[45%_68%] scale-[2.4]', alt: 'Dettaglio del motivo a goccia del bracciale' },
+    ],
+    details: [['Metallo', 'Oro bianco e giallo'], ['Forma', 'Rigido'], ['Motivo', 'A goccia, con brillanti']],
+    opt: { label: 'Misura del polso', error: 'Scegli la misura.', values: ['S', 'M', 'L'] },
+  },
+  {
+    slug: 'orecchini-zaffiro', name: 'Orecchini con zaffiro', col: 'orecchini', price: 1850,
+    short: 'Pendenti, zaffiro blu e cristalli',
+    desc: 'Pendenti con uno zaffiro blu al centro, circondato di cristalli: una pietra al centro, la luce intorno.',
+    views: [
+      { img: 'pendenti', cls: 'object-[50%_42%]' },
+      { img: 'pendenti', cls: 'origin-[53%_43%] scale-[2.6]', alt: 'Dettaglio dello zaffiro blu al centro di un orecchino pendente' },
+    ],
+    details: [['Pietra', 'Zaffiro blu'], ['Contorno', 'Cristalli'], ['Forma', 'Pendenti']],
+    opt: null,
+  },
+  {
+    slug: 'orecchini-cerchi', name: 'Cerchi intrecciati', col: 'orecchini', price: 940,
+    short: 'Oro intrecciato',
+    desc: 'Cerchi in oro intrecciato, ritmati dal metallo stesso. Nessuna pietra: il disegno è tutto nell\'intreccio.',
+    views: [
+      { img: 'intreccio', cls: 'object-[50%_78%]' },
+      { img: 'intreccio', cls: 'origin-[52%_73%] scale-[2.4]', alt: 'Dettaglio di un orecchino a cerchio in oro intrecciato' },
+    ],
+    details: [['Metallo', 'Oro intrecciato'], ['Forma', 'Cerchio'], ['Lavorazione', 'A mano']],
+    opt: null,
+  },
+];
+export const product = (slug) => PRODUCTS.find((p) => p.slug === slug);
+export const relatedProducts = (slug) => {
+  const i = PRODUCTS.findIndex((p) => p.slug === slug);
+  return [1, 2, 3].map((k) => PRODUCTS[(i + k) % PRODUCTS.length]);
+};

@@ -39,3 +39,15 @@ Da sapere:
 - Gli articoli del journal sono testi provvisori, senza date, costruiti solo da frasi già presenti nelle homepage.
 - Email e P.IVA restano i segnaposto del progetto; Privacy e Cookie (già `#` nelle homepage) non hanno ancora una pagina e sono omessi dalle pagine interne.
 - Per le collezioni esiste una sola foto per pezzo: i dettagli sono ritagli della stessa immagine.
+
+## Negozio (lista, scheda prodotto, carrello × 3 concept)
+
+    concept-N/negozio.html                 lista prodotti (filtro per collezione)
+    concept-N/negozio/<slug>.html          scheda prodotto (6)
+    concept-N/carrello.html                carrello
+
+- `build/data.mjs` (`PRODUCTS`) — **catalogo di esempio**: nomi e materiali vengono dai testi delle collezioni, i **prezzi sono segnaposto**.
+- `build/shop.mjs` — form di aggiunta, corpo del carrello e token di stile condivisi; ogni concept li veste a modo suo.
+- `js/shop.js` — carrello in `localStorage`, contatore nell'header, filtro. Nessun backend: «Invia la richiesta d'ordine» apre il programma di posta con l'elenco dei pezzi; non c'è pagamento né spedizione calcolata.
+- Una sola foto per pezzo: la seconda vista di ogni scheda è un ritaglio.
+- Le homepage `concept-N.html` non hanno ancora il link «Negozio» né il contatore carrello.

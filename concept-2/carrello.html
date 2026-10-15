@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carrello — Gregory Jewels</title>
+<meta name="description" content="Il tuo carrello Gregory Jewels.">
+<meta name="theme-color" content="#efe9db">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preload" href="../fonts/cormorant-400.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="../css/tailwind.css">
+</head>
+<body class="bg-stone">
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:bg-ink focus:text-white focus:px-4 focus:py-2">Vai al contenuto</a>
+<div class="cursor" aria-hidden="true"></div>
+
+<header data-header class="fixed inset-x-0 top-0 z-[70] text-white mix-blend-difference max-md:bg-stone max-md:text-ink max-md:mix-blend-normal">
+  <div class="hero-fade flex items-center justify-between px-5 sm:px-10 lg:px-14 py-5" style="--d:.3s">
+    <a href="../concept-2.html" class="flex items-center gap-3" aria-label="Gregory Jewels — homepage">
+      <img class="hidden h-9 w-auto md:block" src="../img/logo-mark-light.png" alt="" width="30" height="44">
+      <img class="h-9 w-auto md:hidden" src="../img/logo-mark.png" alt="" width="30" height="44">
+      <span class="hidden font-display text-xl tracking-[.26em] sm:inline">GREGORY JEWELS</span>
+    </a>
+    <nav aria-label="Principale" class="hidden gap-9 text-[.7rem] uppercase tracking-[.22em] md:flex">
+      <a class="u-link" href="collezioni.html">Opere</a>
+      <a class="u-link" href="artigianalita.html">Processo</a>
+      <a class="u-link" href="maison.html">Studio</a>
+      <a class="u-link" href="negozio.html">Negozio</a>
+      <a class="u-link" href="journal.html">Journal</a>
+      <a class="u-link" href="contatti.html">Contatti</a>
+      <a class="u-link u-link--rest" href="carrello.html" aria-current="page">Carrello (<span data-cart-count>0</span>)</a>
+    </nav>
+    <div class="flex items-center gap-4 md:hidden">
+    <a href="carrello.html" class="text-[.7rem] uppercase tracking-[.22em]" aria-current="page">Carrello (<span data-cart-count>0</span>)</a>
+    <button data-menu-toggle type="button" aria-expanded="false" aria-controls="menu" aria-label="Apri il menu" class="-mr-2 inline-flex min-h-11 items-center px-2 text-[.7rem] uppercase tracking-[.22em] md:hidden">Indice</button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu class="invisible fixed inset-0 z-[60] flex flex-col justify-end bg-ink px-6 pb-12 pt-24 text-white opacity-0 transition-[opacity,visibility] duration-700 ease-lux [&.is-open]:visible [&.is-open]:opacity-100 md:hidden">
+  <nav aria-label="Menu" class="flex flex-col gap-1 font-display text-[clamp(3rem,15vw,5rem)] italic leading-[1.05]">
+    <a href="collezioni.html">Opere</a><a href="artigianalita.html">Processo</a><a href="maison.html">Studio</a><a href="negozio.html">Negozio</a><a href="journal.html">Journal</a><a href="contatti.html">Contatti</a>
+  </nav>
+</div>
+
+<main id="main">
+<section class="relative px-5 pb-16 pt-28 sm:px-10 md:pb-24 lg:px-14" aria-label="Apertura">
+  <h1 class="hero-lines font-display font-normal leading-[.82] tracking-[-.03em] text-[clamp(4.6rem,23vw,27rem)] text-ink"><span class="line"><span class="block" style="--i:0;--d:.3s">Carrello</span></span></h1>
+</section>
+
+<section class="px-5 sm:px-10 lg:px-14 pb-32 md:pb-52" aria-label="Il carrello">
+  <div class="mx-auto max-w-[1760px]">
+<div data-cart data-mailto="info@gregoryjewels.com">
+  <p class="sr-only" role="status" aria-live="polite" data-cart-live></p>
+  <div data-cart-empty hidden class="py-12 md:py-24">
+    <p class="font-display text-4xl italic md:text-5xl">Il carrello è vuoto.</p>
+    <p class="text-[.95rem] leading-[1.9] text-mute mt-4">Scegli un pezzo dal negozio: lo ritrovi qui.</p>
+    <a href="negozio.html" class="inline-flex min-h-12 items-center border border-ink px-8 py-4 text-[.7rem] uppercase tracking-[.22em] transition-colors duration-500 hover:bg-ink hover:text-white mt-10 inline-flex">Vai al negozio</a>
+  </div>
+  <div data-cart-full class="grid gap-14 lg:grid-cols-12 lg:gap-8">
+    <ul data-cart-list class="lg:col-span-7 border-y border-ink/20"></ul>
+    <aside class="lg:col-span-4 lg:col-start-9 lg:self-start lg:sticky lg:top-28 border border-ink/20 p-6 sm:p-8" aria-labelledby="riepilogo">
+      <h2 id="riepilogo" class="font-display text-4xl italic md:text-5xl">Riepilogo</h2>
+      <dl class="mt-6 text-[.9rem]">
+        <div class="flex justify-between gap-6 border-t border-ink/20 py-3"><dt>Pezzi</dt><dd data-items>0</dd></div>
+        <div class="flex justify-between gap-6 border-t border-ink/20 py-3"><dt>Spedizione</dt><dd>Concordata con te</dd></div>
+        <div class="flex justify-between gap-6 border-t border-ink/20 py-3 font-display text-2xl"><dt>Totale</dt><dd data-total>€ 0</dd></div>
+      </dl>
+      <button type="button" data-action="checkout" class="inline-flex min-h-12 items-center border border-ink px-8 py-4 text-[.7rem] uppercase tracking-[.22em] transition-colors duration-500 hover:bg-ink hover:text-white mt-8 w-full justify-center">Invia la richiesta d'ordine</button>
+      <p class="max-w-[46ch] text-[.8rem] leading-[1.8] text-mute mt-5">Nessun pagamento viene preso qui. Il pulsante apre il tuo programma di posta con l'elenco dei pezzi già scritto: ti rispondiamo di persona per confermare disponibilità, spedizione e pagamento.</p>
+      <a href="negozio.html" class="u-link text-[.7rem] uppercase tracking-[.22em] mt-6 inline-block">Continua gli acquisti</a>
+    </aside>
+  </div>
+  <template id="cart-row">
+    <li class="grid grid-cols-[88px_1fr] gap-x-5 gap-y-4 border-t border-ink/20 py-7 first:border-t-0 sm:grid-cols-[132px_1fr_auto] sm:gap-x-8">
+      <div class="frame aspect-[4/5]"><img data-f="img" src="" alt="" width="120" height="150" loading="lazy" class="h-full w-full object-cover"></div>
+      <div class="min-w-0">
+        <a data-f="name" href="#" class="font-display text-3xl italic leading-tight md:text-4xl"></a>
+        <p data-f="opt" class="mt-1 text-[.82rem] text-mute"></p>
+        <p class="mt-1 text-[.82rem] text-mute">Prezzo <span data-f="unit"></span></p>
+        <div class="mt-4 flex flex-wrap items-center gap-x-6 gap-y-3">
+          <div class="mt-2 inline-flex items-center border border-ink/25">
+            <button type="button" data-action="dec" class="grid size-11 place-items-center text-lg transition-colors hover:bg-ink hover:text-white">−</button>
+            <span data-f="qty" class="grid h-11 min-w-10 place-items-center text-[.95rem]" aria-live="off"></span>
+            <button type="button" data-action="inc" class="grid size-11 place-items-center text-lg transition-colors hover:bg-ink hover:text-white">+</button>
+          </div>
+          <button type="button" data-action="remove" class="u-link text-[.7rem] uppercase tracking-[.22em] text-mute">Rimuovi</button>
+        </div>
+      </div>
+      <p data-f="line" class="font-display text-2xl italic md:text-3xl col-start-2 sm:col-start-3 sm:row-start-1 sm:text-right"></p>
+    </li>
+  </template>
+  <script type="application/json" id="catalog">{"collana-pietra-blu":{"name":"Collana con pietra blu","price":1480,"optLabel":"Lunghezza","url":"negozio/collana-pietra-blu.html","img":"../img/gallery-collana-pietra-colore.jpg","cls":"object-[50%_30%]","alt":""},"collana-mezzaluna":{"name":"Collana mezzaluna","price":1290,"optLabel":"Lunghezza","url":"negozio/collana-mezzaluna.html","img":"../img/gallery-collana-pietra-colore.jpg","cls":"object-[50%_80%]","alt":""},"anello-solitario":{"name":"Anello solitario","price":3200,"optLabel":"Misura","url":"negozio/anello-solitario.html","img":"../img/gallery-anello-solitario.jpg","cls":"object-[55%_50%]","alt":""},"bracciale-goccia":{"name":"Bracciale a goccia","price":2650,"optLabel":"Misura del polso","url":"negozio/bracciale-goccia.html","img":"../img/gallery-bracciale-oro.jpg","cls":"object-center","alt":""},"orecchini-zaffiro":{"name":"Orecchini con zaffiro","price":1850,"optLabel":"","url":"negozio/orecchini-zaffiro.html","img":"../img/gallery-orecchini-pendenti.jpg","cls":"object-[50%_42%]","alt":""},"orecchini-cerchi":{"name":"Cerchi intrecciati","price":940,"optLabel":"","url":"negozio/orecchini-cerchi.html","img":"../img/filosofia-orecchini-oro.jpg","cls":"object-[50%_78%]","alt":""}}</script>
+</div>
+  </div>
+</section>
+</main>
+
+<footer class="bg-ink px-5 pb-24 pt-4 text-white sm:px-10 lg:px-14">
+  <div class="mx-auto flex max-w-[1760px] flex-col gap-6 border-t border-white/15 pt-8 text-[.7rem] uppercase tracking-[.22em] text-white/65 md:flex-row md:justify-between">
+    <span>© <span data-year>2026</span> Gregory Jewels · P.IVA 00000000000</span>
+    <nav aria-label="Footer" class="flex flex-wrap gap-x-8 gap-y-3">
+      <a class="u-link" href="collezioni.html">Opere</a><a class="u-link" href="artigianalita.html">Processo</a><a class="u-link" href="maison.html">Studio</a><a class="u-link" href="negozio.html">Negozio</a><a class="u-link" href="journal.html">Journal</a><a class="u-link" href="contatti.html">Contatti</a>
+      <a class="u-link" href="https://www.instagram.com/gregoryjewels/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </div>
+</footer>
+
+<nav class="switcher flex gap-px bg-ink/90 text-[.62rem] uppercase tracking-[.2em] text-white" aria-label="Cambia concept">
+  <a class="px-4 py-3 hover:bg-white/10" href="../concept-1.html">Maison</a>
+  <a class="px-4 py-3 bg-gold text-ink" href="../concept-2.html" aria-current="true">Atelier</a>
+  <a class="px-4 py-3 hover:bg-white/10" href="../concept-3.html">Moderno</a>
+</nav>
+
+<script src="../js/site.js" defer></script>
+<script src="../js/shop.js" defer></script>
+</body>
+</html>

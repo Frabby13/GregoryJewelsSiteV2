@@ -25,9 +25,11 @@
       <a class="u-link" href="collezioni.html">Collezioni</a>
       <a class="u-link u-link--rest" href="maison.html" aria-current="page">Maison</a>
       <a class="u-link" href="artigianalita.html">Atelier</a>
+      <a class="u-link" href="negozio.html">Negozio</a>
       <a class="u-link" href="journal.html">Journal</a>
     </nav>
-    <div class="col-start-3 flex items-center gap-6 text-[.7rem] uppercase tracking-[.2em]">
+    <div class="col-start-3 flex items-center gap-5 text-[.7rem] uppercase tracking-[.2em] sm:gap-6">
+      <a class="u-link" href="carrello.html">Carrello (<span data-cart-count>0</span>)</a>
       <a href="contatti.html" class="hidden border border-current px-5 py-3 transition-colors duration-500 hover:border-gold hover:bg-gold hover:text-ink sm:inline-block">Prenota</a>
       <button data-menu-toggle type="button" aria-expanded="false" aria-controls="menu" aria-label="Apri il menu" class="-mr-2 inline-flex min-h-11 items-center px-2 uppercase tracking-[.2em] lg:hidden">Menu</button>
     </div>
@@ -35,7 +37,7 @@
 </header>
 <div id="menu" data-menu class="invisible fixed inset-0 z-[60] flex flex-col bg-ink px-6 pb-10 pt-24 text-white opacity-0 transition-[opacity,visibility] duration-700 ease-lux [&.is-open]:visible [&.is-open]:opacity-100 lg:hidden">
   <nav aria-label="Menu" class="flex flex-1 flex-col justify-center divide-y divide-white/15 font-display text-[clamp(2rem,9vw,3rem)]">
-    <a class="py-4" href="collezioni.html">Collezioni</a><a class="py-4" href="maison.html">Maison</a><a class="py-4" href="artigianalita.html">Atelier</a><a class="py-4" href="journal.html">Journal</a><a class="py-4 text-gold" href="contatti.html">Prenota un appuntamento</a>
+    <a class="py-4" href="collezioni.html">Collezioni</a><a class="py-4" href="maison.html">Maison</a><a class="py-4" href="artigianalita.html">Atelier</a><a class="py-4" href="negozio.html">Negozio</a><a class="py-4" href="journal.html">Journal</a><a class="py-4 text-gold" href="contatti.html">Prenota un appuntamento</a>
   </nav>
 </div>
 
@@ -125,7 +127,7 @@
       <p class="mt-6 max-w-[30ch] font-display text-2xl italic text-white/80">Creazioni uniche che custodiscono emozioni senza tempo.</p>
     </div>
     <nav aria-label="Footer" class="grid grid-cols-2 gap-8 text-[.75rem] uppercase tracking-[.18em] text-white/70 md:col-span-6 md:col-start-7">
-      <ul class="space-y-3"><li><a class="u-link" href="collezioni.html">Collezioni</a></li><li><a class="u-link" href="maison.html">Maison</a></li><li><a class="u-link" href="artigianalita.html">Atelier</a></li><li><a class="u-link" href="journal.html">Journal</a></li></ul>
+      <ul class="space-y-3"><li><a class="u-link" href="collezioni.html">Collezioni</a></li><li><a class="u-link" href="maison.html">Maison</a></li><li><a class="u-link" href="artigianalita.html">Atelier</a></li><li><a class="u-link" href="negozio.html">Negozio</a></li><li><a class="u-link" href="journal.html">Journal</a></li></ul>
       <ul class="space-y-3"><li><a class="u-link" href="contatti.html">Contatti</a></li><li><a class="u-link" href="https://www.instagram.com/gregoryjewels/" target="_blank" rel="noopener">Instagram</a></li><li><a class="u-link" href="mailto:info@gregoryjewels.com">Email</a></li></ul>
     </nav>
   </div>
@@ -139,5 +141,6 @@
 </nav>
 
 <script src="../js/site.js" defer></script>
+<script src="../js/shop.js" defer></script>
 </body>
 </html>

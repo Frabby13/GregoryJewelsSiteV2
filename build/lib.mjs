@@ -2,6 +2,8 @@ import { IMG, SITE, CONTACT } from './data.mjs';
 
 export const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
+export const IMG_FILE = (key) => IMG[key].file;
+
 /* <img> with the intrinsic size from the data file; `cls` carries object-position / crop utilities */
 export function pic(rt, key, { cls = '', alt, eager = false, attrs = '' } = {}) {
   const i = IMG[key];
@@ -22,13 +24,16 @@ export function links(n, depth) {
     atelier: `${cb}artigianalita.html`,
     journal: `${cb}journal.html`,
     contatti: `${cb}contatti.html`,
+    negozio: `${cb}negozio.html`,
+    carrello: `${cb}carrello.html`,
+    prod: (s) => `${cb}negozio/${s}.html`,
     col: (s) => `${cb}collezioni/${s}.html`,
     art: (s) => `${cb}journal/${s}.html`,
     concept: (i) => `${root}concept-${i}.html`,
   };
 }
 
-export const SECTION_KEYS = ['collezioni', 'maison', 'atelier', 'journal', 'contatti'];
+export const SECTION_KEYS = ['collezioni', 'negozio', 'maison', 'atelier', 'journal', 'contatti'];
 
 export function head({ n, title, desc, themeColor, rt, preload = '' }) {
   return `<!doctype html>
@@ -56,7 +61,7 @@ ${names.map((nm, i) => `  <a class="px-4 py-3 ${i + 1 === n ? 'bg-gold text-ink'
 </nav>`;
 }
 
-export const scripts = (rt, extra = '') => `<script src="${rt}js/site.js" defer></script>\n${extra}`;
+export const scripts = (rt, extra = '') => `<script src="${rt}js/site.js" defer></script>\n<script src="${rt}js/shop.js" defer></script>\n${extra}`;
 export const contactScript = (rt) => `<script src="${rt}js/contact.js" defer></script>\n`;
 
 /* Contact form. Markup is shared (labels, names, validation hooks); each concept passes its own classes.
